@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Happy Birthday asd !</title>
+    <title>Happy Birthday Gloo !</title>
     <style>
       @import url("https://fonts.googleapis.com/css2?family=EB+Garamond:wght@700&display=swap");
       body {
@@ -180,41 +180,25 @@
         padding: 8px 8px 18px 8px;
         margin-bottom: 18px;
         width: 220px;
-        max-width: 90vw;
+        max-width: 80vw;
         display: flex;
         flex-direction: column;
         align-items: center;
         position: relative;
-        box-sizing: border-box;
-        transition: width 0.3s, aspect-ratio 0.3s;
       }
       .polaroid img {
         width: 100%;
-        height: auto;
+        height: 260px;
+        max-height: 60vw;
         object-fit: cover;
         border-radius: 6px;
         box-shadow: 0 2px 8px #bfa77a;
         background: #e2c08d;
         display: block;
-        transition: aspect-ratio 0.3s;
       }
       .polaroid.landscape img {
-        aspect-ratio: 4/3;
-        height: auto;
-        max-width: 100%;
-        max-height: 220px;
-      }
-      .polaroid.portrait img {
-        aspect-ratio: 3/4;
-        height: auto;
-        max-width: 100%;
-        max-height: 220px;
-      }
-      .polaroid.square img {
-        aspect-ratio: 1/1;
-        height: auto;
-        max-width: 100%;
-        max-height: 220px;
+        height: 140px;
+        max-height: 40vw;
       }
       .polaroid .caption {
         font-size: 0.95rem;
@@ -231,7 +215,7 @@
         opacity: 0.7;
       }
       .btns {
-        margin-top: 12px !important;
+        margin-top: 8px;
         display: flex;
         align-items: center;
         gap: 14px;
@@ -336,19 +320,78 @@
           padding: 14px 4vw 12px 4vw;
         }
         .polaroid {
-          width: 98vw;
-          max-width: 98vw;
-          padding: 6px 6px 12px 6px;
+          background: #f5e7d4;
+          border: 6px solid #4b372a;
+          box-shadow: 0 8px 24px rgba(75, 55, 42, 0.22), 0 1px 0 #bfa77a;
+          border-radius: 10px;
+          padding: 8px 8px 18px 8px;
+          margin-bottom: 18px;
+          width: 220px;
+          max-width: 80vw;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          position: relative;
+          aspect-ratio: 1/1; /* default square, akan diubah JS */
+          transition: aspect-ratio 0.3s, width 0.3s;
         }
-        .polaroid img,
-        .polaroid.landscape img,
-        .polaroid.portrait img,
-        .polaroid.square img {
-          max-height: 40vw;
+        .polaroid.landscape {
+          aspect-ratio: 4/3;
+          width: 260px;
+          max-width: 90vw;
         }
+        .polaroid.portrait {
+          aspect-ratio: 3/4;
+          width: 180px;
+          max-width: 70vw;
+        }
+        .polaroid.square {
+          aspect-ratio: 1/1;
+          width: 200px;
+          max-width: 70vw;
+        }
+        .polaroid img {
+          width: 100%;
+          height: 100%;
+          object-fit: contain; /* gambar tidak terpotong */
+          border-radius: 6px;
+          box-shadow: 0 2px 8px #bfa77a;
+          background: #e2c08d;
+          display: block;
+          aspect-ratio: inherit;
+          transition: aspect-ratio 0.3s;
+        }
+        @media (max-width: 600px) {
+          .polaroid,
+          .polaroid.landscape,
+          .polaroid.portrait,
+          .polaroid.square {
+            width: 98vw;
+            max-width: 98vw;
+            aspect-ratio: auto;
+            padding: 6px 6px 12px 6px;
+          }
+          .polaroid img {
+            max-height: 40vw;
+          }
+        }
+        @media (max-width: 400px) {
+          .polaroid,
+          .polaroid.landscape,
+          .polaroid.portrait,
+          .polaroid.square {
+            width: 98vw;
+            max-width: 98vw;
+            aspect-ratio: auto;
+            padding: 4px 4px 8px 4px;
+          }
+          .polaroid img {
+            max-height: 30vw;
+          }
+        }
+
         .btns {
           gap: 8px;
-          margin-top: 12px !important;
         }
         button {
           padding: 10px 12px;
@@ -378,18 +421,11 @@
           padding: 8px 2vw 8px 2vw;
         }
         .polaroid {
-          width: 98vw;
-          max-width: 98vw;
+          width: 90px;
           padding: 4px 4px 8px 4px;
         }
-        .polaroid img,
-        .polaroid.landscape img,
-        .polaroid.portrait img,
-        .polaroid.square img {
-          max-height: 30vw;
-        }
-        .btns {
-          margin-top: 8px !important;
+        .polaroid img {
+          height: 60px;
         }
       }
     </style>
