@@ -180,25 +180,41 @@
         padding: 8px 8px 18px 8px;
         margin-bottom: 18px;
         width: 220px;
-        max-width: 80vw;
+        max-width: 90vw;
         display: flex;
         flex-direction: column;
         align-items: center;
         position: relative;
+        box-sizing: border-box;
+        transition: width 0.3s, aspect-ratio 0.3s;
       }
       .polaroid img {
         width: 100%;
-        height: 260px;
-        max-height: 60vw;
+        height: auto;
         object-fit: cover;
         border-radius: 6px;
         box-shadow: 0 2px 8px #bfa77a;
         background: #e2c08d;
         display: block;
+        transition: aspect-ratio 0.3s;
       }
       .polaroid.landscape img {
-        height: 140px;
-        max-height: 40vw;
+        aspect-ratio: 4/3;
+        height: auto;
+        max-width: 100%;
+        max-height: 220px;
+      }
+      .polaroid.portrait img {
+        aspect-ratio: 3/4;
+        height: auto;
+        max-width: 100%;
+        max-height: 220px;
+      }
+      .polaroid.square img {
+        aspect-ratio: 1/1;
+        height: auto;
+        max-width: 100%;
+        max-height: 220px;
       }
       .polaroid .caption {
         font-size: 0.95rem;
@@ -215,7 +231,7 @@
         opacity: 0.7;
       }
       .btns {
-        margin-top: 8px;
+        margin-top: 12px !important;
         display: flex;
         align-items: center;
         gap: 14px;
@@ -320,15 +336,19 @@
           padding: 14px 4vw 12px 4vw;
         }
         .polaroid {
-          width: 140px;
+          width: 98vw;
+          max-width: 98vw;
           padding: 6px 6px 12px 6px;
         }
-        .polaroid img {
-          height: 120px;
+        .polaroid img,
+        .polaroid.landscape img,
+        .polaroid.portrait img,
+        .polaroid.square img {
           max-height: 40vw;
         }
         .btns {
           gap: 8px;
+          margin-top: 12px !important;
         }
         button {
           padding: 10px 12px;
@@ -358,11 +378,18 @@
           padding: 8px 2vw 8px 2vw;
         }
         .polaroid {
-          width: 90px;
+          width: 98vw;
+          max-width: 98vw;
           padding: 4px 4px 8px 4px;
         }
-        .polaroid img {
-          height: 60px;
+        .polaroid img,
+        .polaroid.landscape img,
+        .polaroid.portrait img,
+        .polaroid.square img {
+          max-height: 30vw;
+        }
+        .btns {
+          margin-top: 8px !important;
         }
       }
     </style>
@@ -979,24 +1006,20 @@
         for (let i = 1; i <= total; i++) {
           const polaroid = document.getElementById("polaroid" + i);
           const img = polaroid.querySelector("img");
-          if (img.naturalWidth && img.naturalHeight) {
-            if (img.naturalHeight > img.naturalWidth) {
-              polaroid.classList.remove("landscape");
-              polaroid.classList.add("portrait");
-            } else {
-              polaroid.classList.remove("portrait");
+          function setFrame() {
+            polaroid.classList.remove("landscape", "portrait", "square");
+            if (Math.abs(img.naturalWidth - img.naturalHeight) < 10) {
+              polaroid.classList.add("square");
+            } else if (img.naturalWidth > img.naturalHeight) {
               polaroid.classList.add("landscape");
+            } else {
+              polaroid.classList.add("portrait");
             }
+          }
+          if (img.complete) {
+            setFrame();
           } else {
-            img.onload = function () {
-              if (img.naturalHeight > img.naturalWidth) {
-                polaroid.classList.remove("landscape");
-                polaroid.classList.add("portrait");
-              } else {
-                polaroid.classList.remove("portrait");
-                polaroid.classList.add("landscape");
-              }
-            };
+            img.onload = setFrame;
           }
         }
       }
