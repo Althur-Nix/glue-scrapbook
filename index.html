@@ -979,22 +979,24 @@
         for (let i = 1; i <= total; i++) {
           const polaroid = document.getElementById("polaroid" + i);
           const img = polaroid.querySelector("img");
-          function setFrame() {
-            if (img.naturalWidth && img.naturalHeight) {
-              polaroid.classList.remove("landscape", "portrait", "square");
-              if (Math.abs(img.naturalWidth - img.naturalHeight) < 10) {
-                polaroid.classList.add("square");
-              } else if (img.naturalWidth > img.naturalHeight) {
-                polaroid.classList.add("landscape");
-              } else {
-                polaroid.classList.add("portrait");
-              }
+          if (img.naturalWidth && img.naturalHeight) {
+            if (img.naturalHeight > img.naturalWidth) {
+              polaroid.classList.remove("landscape");
+              polaroid.classList.add("portrait");
+            } else {
+              polaroid.classList.remove("portrait");
+              polaroid.classList.add("landscape");
             }
-          }
-          if (img.complete) {
-            setFrame();
           } else {
-            img.onload = setFrame;
+            img.onload = function () {
+              if (img.naturalHeight > img.naturalWidth) {
+                polaroid.classList.remove("landscape");
+                polaroid.classList.add("portrait");
+              } else {
+                polaroid.classList.remove("portrait");
+                polaroid.classList.add("landscape");
+              }
+            };
           }
         }
       }
