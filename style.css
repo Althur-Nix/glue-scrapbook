@@ -307,6 +307,35 @@ audio::-webkit-media-controls-time-remaining-display {
   z-index: 20;
 }
 
+/* Navigation Styles */
+.scrapbook-nav {
+  display: flex;
+  gap: 18px;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+
+.nav-btn {
+  background: #b8860b;
+  color: #f7eedd;
+  font-family: "Playfair Display", serif;
+  font-size: 1.3em;
+  border: 2px solid #4d2c1e;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(112, 66, 20, 0.12);
+  transition: background 0.2s, transform 0.2s;
+}
+.nav-btn:hover,
+.nav-btn.active {
+  background: #004d40;
+  color: #fffbe6;
+  transform: scale(1.08);
+  border-color: #b8860b;
+}
+
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .scrapbook-content-area {
@@ -352,4 +381,28 @@ audio::-webkit-media-controls-time-remaining-display {
 .photo-frame,
 .text-note {
   animation: fadeInUp 1s ease;
+}
+
+.main-display-area.slide-out {
+  animation: slideOut 0.4s forwards;
+}
+.main-display-area.slide-in {
+  animation: slideIn 0.6s forwards;
+}
+
+@keyframes slideOut {
+  to {
+    opacity: 0;
+    transform: translateX(-100vw) scale(0.98);
+  }
+}
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(100vw) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
 }
