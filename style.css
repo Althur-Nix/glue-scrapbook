@@ -115,6 +115,25 @@ body {
   transform: rotate(-15deg);
 }
 
+/* Tooltip Styling */
+.photo-frame .tooltip {
+  display: none;
+  position: absolute;
+  bottom: -30px;
+  left: 10px;
+  background: #b8860b;
+  color: #fff;
+  padding: 5px 12px;
+  border-radius: 6px;
+  font-size: 0.95em;
+  white-space: nowrap;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.15);
+  z-index: 20;
+}
+.photo-frame:hover .tooltip {
+  display: block;
+}
+
 /* Text Note Styling */
 .text-note {
   position: absolute;
@@ -227,4 +246,16 @@ body {
     position: static;
     margin-right: 10px;
   }
+}
+
+.photo-frame:hover {
+  box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.25);
+  transform: scale(1.04) rotate(var(--rotation, 0deg));
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.text-note:hover {
+  box-shadow: 6px 6px 16px rgba(0, 0, 0, 0.18);
+  background-color: #fffbe6;
+  transition: box-shadow 0.2s, background-color 0.2s;
 }
