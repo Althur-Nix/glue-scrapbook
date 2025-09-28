@@ -16,7 +16,8 @@
       <header class="scrapbook-header">
         <h1>Happy Birthday</h1>
         <div class="audio-player-wrapper">
-          <audio id="audio" src="your-song.mp3"></audio>
+          <!-- Hapus elemen audio bawaan, hanya gunakan tombol custom -->
+          <!-- <audio id="audio" src="your-song.mp3"></audio> -->
           <button id="customPlayBtn" class="custom-play-btn">
             <svg width="32" height="32" viewBox="0 0 32 32">
               <circle
@@ -31,6 +32,7 @@
             </svg>
           </button>
           <span class="audio-label">Play Song</span>
+          <audio id="audio" src="your-song.mp3" style="display:none;"></audio>
         </div>
       </header>
 
