@@ -37,6 +37,43 @@ body {
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
 }
 
+/* Vertical navigation for scrapbook pages */
+.vertical-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  justify-content: flex-start;
+  align-items: center;
+  margin-left: 0;
+  margin-top: 40px;
+  position: absolute;
+  right: 40px;
+  top: 0;
+  z-index: 20;
+}
+
+.scrapbook-content-area {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  gap: 0;
+}
+
+/* Responsive: move nav below content on mobile */
+@media (max-width: 900px) {
+  .vertical-nav {
+    position: static;
+    flex-direction: row;
+    justify-content: center;
+    margin: 24px 0 0 0;
+    right: unset;
+    top: unset;
+  }
+  .scrapbook-content-area {
+    flex-direction: column;
+  }
+}
+
 .audio-player-wrapper {
   display: flex;
   flex-direction: column;
@@ -53,18 +90,19 @@ body {
   outline: none;
   border: 2px solid #b8860b;
   padding: 6px 0;
+  margin-bottom: 10px;
 }
 
 .audio-decor {
   display: flex;
   align-items: center;
   gap: 10px;
-  margin-top: 8px;
+  margin-top: 0;
 }
 
 .audio-icon {
-  width: 28px;
-  height: 28px;
+  width: 32px;
+  height: 32px;
   background: url("https://cdn-icons-png.flaticon.com/512/727/727245.png")
     no-repeat center/contain;
   filter: sepia(0.5) hue-rotate(-30deg) brightness(0.9);
@@ -76,10 +114,24 @@ body {
   font-size: 1.2em;
   letter-spacing: 1px;
   background: #f7eedd;
-  padding: 2px 12px;
+  padding: 2px 16px;
   border-radius: 8px;
   border: 1px dashed #b8860b;
   box-shadow: 0 1px 4px rgba(184, 134, 11, 0.08);
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.audio-label:hover {
+  background: #b8860b;
+  color: #fffbe6;
+}
+
+/* Hide default controls except play/pause */
+.audio-player-wrapper audio::-webkit-media-controls-enclosure {
+  background: transparent;
+  border-radius: 12px;
+  border: none;
 }
 
 /* Custom play button for audio (only works on browsers that support ::-webkit-media-controls) */

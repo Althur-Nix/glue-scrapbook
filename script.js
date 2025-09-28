@@ -51,23 +51,44 @@ const pages = [
     <div class="text-note torn-edge" style="top: 140px; left: 460px; width: 260px; --rotation: 5deg">
       <h2>Final Memory</h2>
       <p>Terima kasih untuk semua kenangan indah.</p>
-    </div>`
+    </div>`,
 ];
 
-const mainDisplay = document.getElementById('mainDisplay');
-const navBtns = document.querySelectorAll('.nav-btn');
+const mainDisplay = document.getElementById("mainDisplay");
+const navBtns = document.querySelectorAll(".nav-btn");
+const audio = document.getElementById("audio");
+const audioLabel = document.querySelector(".audio-label");
 
 navBtns.forEach((btn, idx) => {
-  btn.addEventListener('click', () => {
-    navBtns.forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
+  btn.addEventListener("click", () => {
+    navBtns.forEach((b) => b.classList.remove("active"));
+    btn.classList.add("active");
     // Animasi kertas keluar
-    mainDisplay.classList.add('slide-out');
+    mainDisplay.classList.add("slide-out");
     setTimeout(() => {
       mainDisplay.innerHTML = pages[idx];
-      mainDisplay.classList.remove('slide-out');
-      mainDisplay.classList.add('slide-in');
-      setTimeout(() => mainDisplay.classList.remove('slide-in'), 600);
+      mainDisplay.classList.remove("slide-out");
+      mainDisplay.classList.add("slide-in");
+      setTimeout(() => mainDisplay.classList.remove("slide-in"), 600);
     }, 400);
   });
 });
+
+// Custom play/pause button using label
+if (audioLabel && audio) {
+  audioLabel.addEventListener("click", () => {
+    if (audio.paused) {
+      audio.play();
+      audioLabel.textContent = "Pause Song";
+    } else {
+      audio.pause();
+      audioLabel.textContent = "Play Song";
+    }
+  });
+  audio.addEventListener("play", () => {
+    audioLabel.textContent = "Pause Song";
+  });
+  audio.addEventListener("pause", () => {
+    audioLabel.textContent = "Play Song";
+  });
+}
