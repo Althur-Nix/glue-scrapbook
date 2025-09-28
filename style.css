@@ -388,6 +388,19 @@ audio::-webkit-media-controls-time-remaining-display {
   border-color: #b8860b;
 }
 
+/* Custom play button styles */
+.custom-play-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  margin-right: 10px;
+  transition: transform 0.2s;
+}
+.custom-play-btn:active {
+  transform: scale(0.95);
+}
+
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .scrapbook-content-area {

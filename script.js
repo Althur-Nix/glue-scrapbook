@@ -57,6 +57,7 @@ const pages = [
 const mainDisplay = document.getElementById("mainDisplay");
 const navBtns = document.querySelectorAll(".nav-btn");
 const audio = document.getElementById("audio");
+const playBtn = document.getElementById("customPlayBtn");
 const audioLabel = document.querySelector(".audio-label");
 
 navBtns.forEach((btn, idx) => {
@@ -74,21 +75,19 @@ navBtns.forEach((btn, idx) => {
   });
 });
 
-// Custom play/pause button using label
-if (audioLabel && audio) {
-  audioLabel.addEventListener("click", () => {
-    if (audio.paused) {
-      audio.play();
-      audioLabel.textContent = "Pause Song";
-    } else {
-      audio.pause();
-      audioLabel.textContent = "Play Song";
-    }
-  });
-  audio.addEventListener("play", () => {
+playBtn.addEventListener("click", () => {
+  if (audio.paused) {
+    audio.play();
     audioLabel.textContent = "Pause Song";
-  });
-  audio.addEventListener("pause", () => {
+  } else {
+    audio.pause();
     audioLabel.textContent = "Play Song";
-  });
-}
+  }
+});
+
+audio.addEventListener("play", () => {
+  audioLabel.textContent = "Pause Song";
+});
+audio.addEventListener("pause", () => {
+  audioLabel.textContent = "Play Song";
+});
