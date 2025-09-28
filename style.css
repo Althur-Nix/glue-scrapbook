@@ -1,4 +1,7 @@
 /* Global Styles */
+* {
+  background-color: #004d40;
+}
 body {
   margin: 0;
   font-family: "Lora", serif;
