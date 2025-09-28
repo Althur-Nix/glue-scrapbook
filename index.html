@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>A Collection of Shared Memories</title>
+    <title>Happy Birthday, Gloo!</title>
     <link rel="stylesheet" href="style.css" />
     <!-- Google Fonts (Playfair Display, Lora, Dancing Script) -->
     <link
@@ -15,10 +15,16 @@
     <div class="scrapbook-container">
       <header class="scrapbook-header">
         <h1>Happy Birthday</h1>
-        <audio controls>
-          <source src="nothing.mp3" type="audio/mpeg" />
-          Your browser does not support the audio element.
-        </audio>
+        <div class="audio-player-wrapper">
+          <audio id="audio" controls>
+            <source src="nothing.mp3" type="audio/mpeg" />
+            Your browser does not support the audio element.
+          </audio>
+          <div class="audio-decor">
+            <span class="audio-icon"></span>
+            <span class="audio-label">Play Song</span>
+          </div>
+        </div>
       </header>
 
       <main class="scrapbook-content-area">
