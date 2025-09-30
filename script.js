@@ -47,7 +47,7 @@ const pages = [
     <img src="foto_bebas3.jpg" alt="Petualangan" />
     <span class="tooltip">Petualangan</span>
   </div>
-  <div class="photo-frame bottom-right" style="top: 340px; left: 600px; width: 170px; --rotation: -8deg">
+  <div class="photo-frame bottom-right" style="top: 340px; left: 750px; width: 170px; --rotation: -8deg">
     <img src="foto_bebas4.jpg" alt="Momen random" />
     <span class="tooltip">Momen random</span>
   </div>
