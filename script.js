@@ -62,16 +62,15 @@ const pages = [
 // Fungsi navigasi halaman scrapbook tetap seperti sebelumnya
 const mainDisplay = document.getElementById("mainDisplay");
 const navBtns = document.querySelectorAll(".nav-btn");
+const initialContent = mainDisplay.innerHTML; // simpan isi awal halaman 1
 
 navBtns.forEach((btn, idx) => {
   btn.addEventListener("click", () => {
     navBtns.forEach((b) => b.classList.remove("active"));
     btn.classList.add("active");
     if (idx === 0) {
-      // Kembali ke halaman utama (reload atau tampilkan konten awal)
-      location.reload(); // cara paling mudah
-      // Atau, jika ingin tanpa reload, simpan konten awal di variabel lalu set innerHTML
-      // mainDisplay.innerHTML = initialContent;
+      // Tampilkan ulang halaman 1 tanpa reload (lagu tetap jalan)
+      mainDisplay.innerHTML = initialContent;
     } else {
       mainDisplay.classList.add("slide-out");
       setTimeout(() => {
@@ -82,4 +81,24 @@ navBtns.forEach((btn, idx) => {
       }, 400);
     }
   });
+});
+
+const audio = document.getElementById("audio");
+const playBtn = document.getElementById("customPlayBtn");
+const audioLabel = document.querySelector(".audio-label");
+
+playBtn.addEventListener("click", () => {
+  if (audio.paused) {
+    audio.play();
+    audioLabel.textContent = "Pause Song";
+  } else {
+    audio.pause();
+    audioLabel.textContent = "Play Song";
+  }
+});
+audio.addEventListener("play", () => {
+  audioLabel.textContent = "Pause Song";
+});
+audio.addEventListener("pause", () => {
+  audioLabel.textContent = "Play Song";
 });
