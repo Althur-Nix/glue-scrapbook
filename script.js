@@ -72,23 +72,23 @@ const pages = [
   </div>
   <div class="icon-coffee" style="top: 180px; left: 350px"></div>
   <div class="icon-books" style="bottom: 10px; right: 10px"></div>
-  `,
+  `
 ];
 
 // Fungsi navigasi halaman scrapbook tetap seperti sebelumnya
-const mainDisplay = document.getElementById("mainDisplay");
-const navBtns = document.querySelectorAll(".nav-btn");
+const mainDisplay = document.getElementById('mainDisplay');
+const navBtns = document.querySelectorAll('.nav-btn');
 
 navBtns.forEach((btn, idx) => {
-  btn.addEventListener("click", () => {
-    navBtns.forEach((b) => b.classList.remove("active"));
-    btn.classList.add("active");
-    mainDisplay.classList.add("slide-out");
+  btn.addEventListener('click', () => {
+    navBtns.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    mainDisplay.classList.add('slide-out');
     setTimeout(() => {
       mainDisplay.innerHTML = pages[idx];
-      mainDisplay.classList.remove("slide-out");
-      mainDisplay.classList.add("slide-in");
-      setTimeout(() => mainDisplay.classList.remove("slide-in"), 600);
+      mainDisplay.classList.remove('slide-out');
+      mainDisplay.classList.add('slide-in');
+      setTimeout(() => mainDisplay.classList.remove('slide-in'), 600);
     }, 400);
   });
 });
