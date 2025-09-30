@@ -401,6 +401,54 @@ audio::-webkit-media-controls-time-remaining-display {
   transform: scale(0.95);
 }
 
+/* Vertical Navigation Player Styles */
+.vn-player.decorated-vn {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #f7eedd;
+  border: 2px dashed #b8860b;
+  border-radius: 16px;
+  box-shadow: 0 2px 12px rgba(112, 66, 20, 0.08);
+  padding: 18px 24px 12px 24px;
+  z-index: 15;
+  min-width: 220px;
+}
+
+.vn-decor {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.vn-icon {
+  width: 32px;
+  height: 32px;
+  background: url("https://cdn-icons-png.flaticon.com/512/727/727245.png")
+    no-repeat center/contain;
+  filter: sepia(0.5) hue-rotate(-30deg) brightness(0.9);
+}
+
+.vn-label {
+  font-family: "Dancing Script", cursive;
+  color: #b8860b;
+  font-size: 1.1em;
+  letter-spacing: 1px;
+  background: #fffbe6;
+  padding: 2px 14px;
+  border-radius: 8px;
+  border: 1px dashed #b8860b;
+  box-shadow: 0 1px 4px rgba(184, 134, 11, 0.08);
+}
+
+.vn-audio {
+  width: 180px;
+  margin-top: 4px;
+  background: transparent;
+}
+
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .scrapbook-content-area {
