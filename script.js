@@ -1,23 +1,23 @@
 const pages = [
-  // Halaman 2: Momen Lucu & VN (3 foto, tidak menumpuk)
+  // Halaman 2: 3 foto, notes & VN tidak menumpuk
   `
   <div class="photo-frame top-left" style="top: 60px; left: 120px; width: 210px; --rotation: -7deg">
     <img src="foto_lucu1.jpg" alt="Momen lucu 1" />
     <span class="tooltip">Ekspresi gokil</span>
   </div>
-  <div class="photo-frame top-right" style="top: 80px; left: 600px; width: 200px; --rotation: 8deg">
+  <div class="photo-frame top-right" style="top: 60px; left: 600px; width: 200px; --rotation: 8deg">
     <img src="foto_lucu2.jpg" alt="Momen lucu 2" />
     <span class="tooltip">Candid seru</span>
   </div>
-  <div class="photo-frame bottom-center" style="top: 340px; left: 370px; width: 220px; --rotation: 4deg">
+  <div class="photo-frame bottom-left" style="top: 340px; left: 180px; width: 220px; --rotation: 4deg">
     <img src="foto_lucu3.jpg" alt="Momen lucu 3" />
     <span class="tooltip">Tertawa bareng</span>
   </div>
-  <div class="text-note torn-edge" style="top: 210px; left: 370px; width: 320px; --rotation: 1deg; z-index:12;">
+  <div class="text-note torn-edge" style="top: 180px; left: 400px; width: 320px; --rotation: 1deg; z-index:12;">
     <h2>Momen Lucu Bareng</h2>
     <p>Hari-hari penuh tawa dan cerita konyol. Semoga selalu ada kebahagiaan seperti ini di hidupmu!</p>
   </div>
-  <div class="vn-player decorated-vn" style="top: 400px; left: 420px;">
+  <div class="vn-player decorated-vn" style="top: 320px; left: 500px;">
     <div class="vn-decor">
       <span class="vn-icon"></span>
       <button class="vn-play-btn" aria-label="Play VN">
@@ -30,10 +30,10 @@ const pages = [
     </div>
     <audio class="vn-audio" src="voice_note1.mp3" style="display:none;"></audio>
   </div>
-  <div class="icon-coffee" style="top: 180px; left: 350px"></div>
+  <div class="icon-coffee" style="top: 120px; left: 350px"></div>
   `,
 
-  // Halaman 3: Ucapan Masa Depan & Foto Bebas (4 foto, tidak menumpuk)
+  // Halaman 3: 4 foto, notes tidak menumpuk dengan foto terakhir
   `
   <div class="photo-frame top-left" style="top: 70px; left: 110px; width: 180px; --rotation: -5deg">
     <img src="foto_bebas1.jpg" alt="Momen santai" />
@@ -47,11 +47,11 @@ const pages = [
     <img src="foto_bebas3.jpg" alt="Petualangan" />
     <span class="tooltip">Petualangan</span>
   </div>
-  <div class="photo-frame bottom-right" style="top: 330px; left: 600px; width: 170px; --rotation: -8deg">
+  <div class="photo-frame bottom-right" style="top: 340px; left: 600px; width: 170px; --rotation: -8deg">
     <img src="foto_bebas4.jpg" alt="Momen random" />
     <span class="tooltip">Momen random</span>
   </div>
-  <div class="text-note torn-edge" style="top: 210px; left: 390px; width: 270px; --rotation: 2deg; z-index:12;">
+  <div class="text-note torn-edge" style="top: 200px; left: 390px; width: 270px; --rotation: 2deg; z-index:12;">
     <h2>Untuk Masa Depanmu</h2>
     <p>Semoga langkahmu selalu diberkahi. Jangan takut bermimpi, dan teruslah berjuang untuk masa depan yang kamu inginkan!</p>
     <blockquote>"The best is yet to come."</blockquote>
@@ -59,25 +59,25 @@ const pages = [
   <div class="icon-books" style="bottom: 10px; right: 10px"></div>
   `,
 
-  // Halaman 4: Momen Paling Berkesan & VN Penutup (3 foto, tidak menumpuk)
+  // Halaman 4: 3 foto, notes & VN tidak menumpuk
   `
   <div class="photo-frame top-left" style="top: 90px; left: 180px; width: 200px; --rotation: -6deg">
     <img src="foto_berkesan1.jpg" alt="Momen berkesan 1" />
     <span class="tooltip">Momen spesial</span>
   </div>
-  <div class="photo-frame top-right" style="top: 100px; left: 630px; width: 200px; --rotation: 6deg">
+  <div class="photo-frame top-right" style="top: 90px; left: 630px; width: 200px; --rotation: 6deg">
     <img src="foto_berkesan2.jpg" alt="Momen berkesan 2" />
     <span class="tooltip">Kenangan indah</span>
   </div>
-  <div class="photo-frame bottom-center" style="top: 340px; left: 400px; width: 220px; --rotation: 7deg">
+  <div class="photo-frame bottom-left" style="top: 340px; left: 400px; width: 220px; --rotation: 7deg">
     <img src="foto_berkesan3.jpg" alt="Momen berkesan 3" />
     <span class="tooltip">Tak terlupakan</span>
   </div>
-  <div class="text-note torn-edge" style="top: 220px; left: 390px; width: 320px; --rotation: 0deg; z-index:12;">
+  <div class="text-note torn-edge" style="top: 180px; left: 400px; width: 320px; --rotation: 0deg; z-index:12;">
     <h2>Terima Kasih Untuk Segalanya</h2>
     <p>Semua kenangan ini akan selalu aku simpan. Terima kasih sudah menjadi bagian penting dalam hidupku. Semoga kamu selalu bahagia!</p>
   </div>
-  <div class="vn-player decorated-vn" style="top: 400px; left: 440px;">
+  <div class="vn-player decorated-vn" style="top: 320px; left: 520px;">
     <div class="vn-decor">
       <span class="vn-icon"></span>
       <button class="vn-play-btn" aria-label="Play VN">
@@ -90,7 +90,7 @@ const pages = [
     </div>
     <audio class="vn-audio" src="voice_note2.mp3" style="display:none;"></audio>
   </div>
-  <div class="icon-coffee" style="top: 180px; left: 350px"></div>
+  <div class="icon-coffee" style="top: 120px; left: 350px"></div>
   <div class="icon-books" style="bottom: 10px; right: 10px"></div>
   `,
 ];
