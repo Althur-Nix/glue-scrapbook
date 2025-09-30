@@ -1,70 +1,88 @@
 const pages = [
-  // Halaman 1
-  `<div class="photo-frame top-left" style="top: 50px; left: 100px; width: 250px; --rotation: -5deg">
-      <img src="foto2.jpg" alt="Shared memory photo 1" />
-      <span class="tooltip">hmhmmhmhm</span>
-    </div>
-    <div class="text-note torn-edge" style="top: 80px; left: 400px; width: 300px; --rotation: 3deg">
-      <h2>To Gloria, On Your Special Day!</h2>
-      <p>Though paths diverge, the memories we made are treasures I hold dear. Wishing you a year filled with joy, success, and all the happiness you deserve. Thank you for everything.</p>
-    </div>
-    <div class="photo-frame bottom-right" style="top: 300px; left: 150px; width: 220px; --rotation: 8deg">
-      <img src="foto1.jpg" alt="Shared memory photo 2" />
-      <span class="tooltip">yeyeyeyeyey</span>
-    </div>
-    <div class="photo-frame top-right" style="top: 250px; left: 750px; width: 180px; --rotation: -10deg">
-      <img src="foto3.jpg" alt="Shared memory photo 3" />
-      <span class="tooltip">Dora kecil yeay</span>
-    </div>
-    <div class="text-note torn-edge" style="top: 400px; left: 450px; width: 300px; --rotation: -4deg">
-      <p>"Some journeys are meant to shape us, even if they don't last forever." Remembering the good times always.</p>
-    </div>
-    <div class="icon-coffee" style="top: 180px; left: 350px"></div>
-    <div class="icon-books" style="bottom: 10px; right: 10px"></div>`,
-  // Halaman 2
-  `<div class="photo-frame top-left" style="top: 60px; left: 120px; width: 220px; --rotation: -3deg">
-      <img src="foto4.jpg" alt="Memory 4" />
-      <span class="tooltip">Liburan bareng</span>
-    </div>
-    <div class="text-note torn-edge" style="top: 100px; left: 380px; width: 320px; --rotation: 2deg">
-      <h2>Another Memory</h2>
-      <p>Kenangan indah di tahun kedua. Semoga selalu bahagia!</p>
-    </div>
-    <div class="photo-frame bottom-right" style="top: 320px; left: 180px; width: 200px; --rotation: 6deg">
-      <img src="foto5.jpg" alt="Memory 5" />
-      <span class="tooltip">Makan es krim</span>
-    </div>`,
-  // Halaman 3
-  `<div class="photo-frame top-left" style="top: 70px; left: 140px; width: 230px; --rotation: -6deg">
-      <img src="foto6.jpg" alt="Memory 6" />
-      <span class="tooltip">Main di taman</span>
-    </div>
-    <div class="text-note torn-edge" style="top: 120px; left: 420px; width: 280px; --rotation: 4deg">
-      <h2>Special Day</h2>
-      <p>Hari spesial yang tak terlupakan.</p>
-    </div>`,
-  // Halaman 4
-  `<div class="photo-frame top-left" style="top: 80px; left: 160px; width: 210px; --rotation: -2deg">
-      <img src="foto7.jpg" alt="Memory 7" />
-      <span class="tooltip">Foto terakhir</span>
-    </div>
-    <div class="text-note torn-edge" style="top: 140px; left: 460px; width: 260px; --rotation: 5deg">
-      <h2>Final Memory</h2>
-      <p>Terima kasih untuk semua kenangan indah.</p>
-    </div>`,
+  // Halaman 1: Ucapan Selamat & Masa Kecil
+  `
+  <div class="photo-frame top-left" style="top: 60px; left: 120px; width: 230px; --rotation: -5deg">
+    <img src="foto_masakecil.jpg" alt="Foto masa kecil" />
+    <span class="tooltip">Masa kecil yang ceria</span>
+  </div>
+  <div class="text-note torn-edge" style="top: 100px; left: 400px; width: 320px; --rotation: 2deg">
+    <h2>Selamat Ulang Tahun, Gloria!</h2>
+    <p>Semoga hari ini penuh kebahagiaan dan kenangan indah. Terima kasih sudah menjadi bagian dari cerita hidupku. Lagu ini selalu mengingatkanku pada momen spesial bersama kamu.</p>
+  </div>
+  <div class="photo-frame bottom-right" style="top: 320px; left: 180px; width: 200px; --rotation: 6deg">
+    <img src="foto_kecil2.jpg" alt="Foto masa kecil 2" />
+    <span class="tooltip">Momen lucu waktu kecil</span>
+  </div>
+  <div class="icon-coffee" style="top: 180px; left: 350px"></div>
+  <div class="icon-books" style="bottom: 10px; right: 10px"></div>
+  `,
+
+  // Halaman 2: Momen Lucu & VN
+  `
+  <div class="photo-frame top-left" style="top: 70px; left: 140px; width: 230px; --rotation: -6deg">
+    <img src="foto_lucu1.jpg" alt="Momen lucu" />
+    <span class="tooltip">Ekspresi paling gokil</span>
+  </div>
+  <div class="text-note torn-edge" style="top: 120px; left: 420px; width: 280px; --rotation: 4deg">
+    <h2>Momen Lucu Bareng</h2>
+    <p>Hari-hari penuh tawa dan cerita konyol. Semoga selalu ada kebahagiaan seperti ini di hidupmu!</p>
+  </div>
+  <div class="photo-frame bottom-right" style="top: 340px; left: 200px; width: 210px; --rotation: 8deg">
+    <img src="foto_lucu2.jpg" alt="Momen lucu 2" />
+    <span class="tooltip">Candid terbaik</span>
+  </div>
+  <div class="vn-player" style="top: 420px; left: 450px;">
+    <audio id="vn1" src="voice_note1.mp3" controls></audio>
+    <span class="vn-label">Voice Note: Cerita Lucu</span>
+  </div>
+  <div class="icon-coffee" style="top: 180px; left: 350px"></div>
+  `,
+
+  // Halaman 3: Ucapan Masa Depan & Foto Bebas
+  `
+  <div class="photo-frame top-left" style="top: 80px; left: 160px; width: 210px; --rotation: -2deg">
+    <img src="foto_bebas1.jpg" alt="Foto bebas" />
+    <span class="tooltip">Momen santai</span>
+  </div>
+  <div class="text-note torn-edge" style="top: 140px; left: 460px; width: 260px; --rotation: 5deg">
+    <h2>Untuk Masa Depanmu</h2>
+    <p>Semoga langkahmu selalu diberkahi. Jangan takut bermimpi, dan teruslah berjuang untuk masa depan yang kamu inginkan!</p>
+    <blockquote>"The best is yet to come."</blockquote>
+  </div>
+  <div class="photo-frame bottom-right" style="top: 360px; left: 220px; width: 180px; --rotation: 7deg">
+    <img src="foto_bebas2.jpg" alt="Foto bebas 2" />
+    <span class="tooltip">Bersama teman-teman</span>
+  </div>
+  <div class="icon-books" style="bottom: 10px; right: 10px"></div>
+  `,
+
+  // Halaman 4: Momen Paling Berkesan & VN Penutup
+  `
+  <div class="photo-frame top-left" style="top: 90px; left: 180px; width: 220px; --rotation: -4deg">
+    <img src="foto_berkesan.jpg" alt="Momen paling berkesan" />
+    <span class="tooltip">Momen tak terlupakan</span>
+  </div>
+  <div class="text-note torn-edge" style="top: 160px; left: 480px; width: 240px; --rotation: 6deg">
+    <h2>Terima Kasih Untuk Segalanya</h2>
+    <p>Semua kenangan ini akan selalu aku simpan. Terima kasih sudah menjadi bagian penting dalam hidupku. Semoga kamu selalu bahagia!</p>
+  </div>
+  <div class="vn-player" style="top: 420px; left: 450px;">
+    <audio id="vn2" src="voice_note2.mp3" controls></audio>
+    <span class="vn-label">Voice Note: Pesan Penutup</span>
+  </div>
+  <div class="icon-coffee" style="top: 180px; left: 350px"></div>
+  <div class="icon-books" style="bottom: 10px; right: 10px"></div>
+  `,
 ];
 
+// Fungsi navigasi halaman scrapbook tetap seperti sebelumnya
 const mainDisplay = document.getElementById("mainDisplay");
 const navBtns = document.querySelectorAll(".nav-btn");
-const audio = document.getElementById("audio");
-const playBtn = document.getElementById("customPlayBtn");
-const audioLabel = document.querySelector(".audio-label");
 
 navBtns.forEach((btn, idx) => {
   btn.addEventListener("click", () => {
     navBtns.forEach((b) => b.classList.remove("active"));
     btn.classList.add("active");
-    // Animasi kertas keluar
     mainDisplay.classList.add("slide-out");
     setTimeout(() => {
       mainDisplay.innerHTML = pages[idx];
@@ -73,21 +91,4 @@ navBtns.forEach((btn, idx) => {
       setTimeout(() => mainDisplay.classList.remove("slide-in"), 600);
     }, 400);
   });
-});
-
-playBtn.addEventListener("click", () => {
-  if (audio.paused) {
-    audio.play();
-    audioLabel.textContent = "Pause Song";
-  } else {
-    audio.pause();
-    audioLabel.textContent = "Play Song";
-  }
-});
-
-audio.addEventListener("play", () => {
-  audioLabel.textContent = "Pause Song";
-});
-audio.addEventListener("pause", () => {
-  audioLabel.textContent = "Play Song";
 });
