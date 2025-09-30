@@ -449,6 +449,18 @@ audio::-webkit-media-controls-time-remaining-display {
   background: transparent;
 }
 
+.vn-play-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  margin-right: 8px;
+  transition: transform 0.2s;
+}
+.vn-play-btn:active {
+  transform: scale(0.95);
+}
+
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .scrapbook-content-area {

@@ -96,24 +96,57 @@ const mainDisplay = document.getElementById("mainDisplay");
 const navBtns = document.querySelectorAll(".nav-btn");
 const initialContent = mainDisplay.innerHTML; // simpan isi awal halaman 1
 
+function setupVNPlayers() {
+  document.querySelectorAll(".vn-player").forEach((player) => {
+    const btn = player.querySelector(".vn-play-btn");
+    const audio = player.querySelector(".vn-audio");
+    if (btn && audio) {
+      btn.onclick = () => {
+        if (audio.paused) {
+          // Pause all other VN audios
+          document.querySelectorAll(".vn-audio").forEach((a) => {
+            if (a !== audio) a.pause();
+          });
+          audio.play();
+          btn.classList.add("playing");
+        } else {
+          audio.pause();
+          btn.classList.remove("playing");
+        }
+      };
+      audio.onplay = () => btn.classList.add("playing");
+      audio.onpause = () => btn.classList.remove("playing");
+      audio.onended = () => btn.classList.remove("playing");
+    }
+  });
+}
+
+// Panggil setupVNPlayers setiap halaman diganti
+function renderPage(idx) {
+  if (idx === 0) {
+    mainDisplay.innerHTML = initialContent;
+  } else {
+    mainDisplay.classList.add("slide-out");
+    setTimeout(() => {
+      mainDisplay.innerHTML = pages[idx - 1];
+      mainDisplay.classList.remove("slide-out");
+      mainDisplay.classList.add("slide-in");
+      setTimeout(() => mainDisplay.classList.remove("slide-in"), 600);
+      setupVNPlayers(); // <-- panggil di sini
+    }, 400);
+  }
+}
+
 navBtns.forEach((btn, idx) => {
   btn.addEventListener("click", () => {
     navBtns.forEach((b) => b.classList.remove("active"));
     btn.classList.add("active");
-    if (idx === 0) {
-      // Tampilkan ulang halaman 1 tanpa reload (lagu tetap jalan)
-      mainDisplay.innerHTML = initialContent;
-    } else {
-      mainDisplay.classList.add("slide-out");
-      setTimeout(() => {
-        mainDisplay.innerHTML = pages[idx - 1];
-        mainDisplay.classList.remove("slide-out");
-        mainDisplay.classList.add("slide-in");
-        setTimeout(() => mainDisplay.classList.remove("slide-in"), 600);
-      }, 400);
-    }
+    renderPage(idx);
   });
 });
+
+// Panggil juga saat halaman pertama dimuat jika ada VN di halaman 1
+setupVNPlayers();
 
 const audio = document.getElementById("audio");
 const playBtn = document.getElementById("customPlayBtn");
