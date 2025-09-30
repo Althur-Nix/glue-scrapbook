@@ -69,7 +69,7 @@ const pages = [
     <img src="foto_berkesan2.jpg" alt="Momen berkesan 2" />
     <span class="tooltip">Kenangan indah</span>
   </div>
-  <div class="photo-frame bottom-left" style="top: 340px; left: 200px; width: 220px; --rotation: 7deg">
+  <div class="photo-frame bottom-left" style="top: 340px; left: 150px; width: 220px; --rotation: 7deg">
     <img src="foto_berkesan3.jpg" alt="Momen berkesan 3" />
     <span class="tooltip">Tak terlupakan</span>
   </div>
