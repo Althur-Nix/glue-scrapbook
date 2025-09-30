@@ -9,6 +9,10 @@ const pages = [
     <img src="foto_lucu2.jpg" alt="Momen lucu 2" />
     <span class="tooltip">Candid seru</span>
   </div>
+  <div class="text-note torn-edge" style="top: 210px; left: 340px; width: 320px; --rotation: 2deg; z-index:12;">
+    <h2>Momen Lucu Bareng</h2>
+    <p>Hari-hari penuh tawa dan cerita konyol. Semoga selalu ada kebahagiaan seperti ini di hidupmu!</p>
+  </div>
   <div class="photo-frame bottom-left" style="top: 350px; left: 140px; width: 170px; --rotation: 5deg">
     <img src="foto_lucu3.jpg" alt="Momen lucu 3" />
     <span class="tooltip">Tertawa bareng</span>
@@ -17,7 +21,7 @@ const pages = [
     <img src="foto_lucu4.jpg" alt="Momen lucu 4" />
     <span class="tooltip">Momen random</span>
   </div>
-  <div class="vn-player decorated-vn" style="top: 220px; left: 370px;">
+  <div class="vn-player decorated-vn" style="top: 370px; left: 420px;">
     <div class="vn-decor">
       <span class="vn-icon"></span>
       <span class="vn-label">Voice Note: Cerita Lucu</span>
@@ -27,7 +31,7 @@ const pages = [
   <div class="icon-coffee" style="top: 180px; left: 350px"></div>
   `,
 
-  // Halaman 3: Ucapan Masa Depan & Foto Bebas
+  // Halaman 3: Ucapan Masa Depan & Foto Bebas (sudah OK)
   `
   <div class="photo-frame top-left" style="top: 70px; left: 110px; width: 190px; --rotation: -5deg">
     <img src="foto_bebas1.jpg" alt="Momen santai" />
@@ -37,6 +41,11 @@ const pages = [
     <img src="foto_bebas2.jpg" alt="Bersama teman" />
     <span class="tooltip">Bersama teman</span>
   </div>
+  <div class="text-note torn-edge" style="top: 200px; left: 400px; width: 270px; --rotation: 2deg; z-index:12;">
+    <h2>Untuk Masa Depanmu</h2>
+    <p>Semoga langkahmu selalu diberkahi. Jangan takut bermimpi, dan teruslah berjuang untuk masa depan yang kamu inginkan!</p>
+    <blockquote>"The best is yet to come."</blockquote>
+  </div>
   <div class="photo-frame bottom-left" style="top: 340px; left: 180px; width: 180px; --rotation: 4deg">
     <img src="foto_bebas3.jpg" alt="Petualangan" />
     <span class="tooltip">Petualangan</span>
@@ -44,11 +53,6 @@ const pages = [
   <div class="photo-frame bottom-right" style="top: 330px; left: 590px; width: 190px; --rotation: -8deg">
     <img src="foto_bebas4.jpg" alt="Momen random" />
     <span class="tooltip">Momen random</span>
-  </div>
-  <div class="text-note torn-edge" style="top: 200px; left: 400px; width: 270px; --rotation: 2deg">
-    <h2>Untuk Masa Depanmu</h2>
-    <p>Semoga langkahmu selalu diberkahi. Jangan takut bermimpi, dan teruslah berjuang untuk masa depan yang kamu inginkan!</p>
-    <blockquote>"The best is yet to come."</blockquote>
   </div>
   <div class="icon-books" style="bottom: 10px; right: 10px"></div>
   `,
@@ -63,6 +67,10 @@ const pages = [
     <img src="foto_berkesan2.jpg" alt="Momen berkesan 2" />
     <span class="tooltip">Kenangan indah</span>
   </div>
+  <div class="text-note torn-edge" style="top: 220px; left: 390px; width: 320px; --rotation: 0deg; z-index:12;">
+    <h2>Terima Kasih Untuk Segalanya</h2>
+    <p>Semua kenangan ini akan selalu aku simpan. Terima kasih sudah menjadi bagian penting dalam hidupku. Semoga kamu selalu bahagia!</p>
+  </div>
   <div class="photo-frame bottom-left" style="top: 350px; left: 170px; width: 180px; --rotation: 7deg">
     <img src="foto_berkesan3.jpg" alt="Momen berkesan 3" />
     <span class="tooltip">Tak terlupakan</span>
@@ -71,16 +79,12 @@ const pages = [
     <img src="foto_berkesan4.jpg" alt="Momen berkesan 4" />
     <span class="tooltip">Bahagia selalu</span>
   </div>
-  <div class="vn-player decorated-vn" style="top: 220px; left: 390px;">
+  <div class="vn-player decorated-vn" style="top: 370px; left: 440px;">
     <div class="vn-decor">
       <span class="vn-icon"></span>
       <span class="vn-label">Voice Note: Pesan Penutup</span>
     </div>
     <audio controls src="voice_note2.mp3" class="vn-audio"></audio>
-  </div>
-  <div class="text-note torn-edge" style="top: 420px; left: 450px; width: 300px; --rotation: -4deg">
-    <h2>Terima Kasih Untuk Segalanya</h2>
-    <p>Semua kenangan ini akan selalu aku simpan. Terima kasih sudah menjadi bagian penting dalam hidupku. Semoga kamu selalu bahagia!</p>
   </div>
   <div class="icon-coffee" style="top: 180px; left: 350px"></div>
   <div class="icon-books" style="bottom: 10px; right: 10px"></div>
