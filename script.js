@@ -1,21 +1,5 @@
 const pages = [
   // Halaman 1: Ucapan Selamat & Masa Kecil
-  `
-  <div class="photo-frame top-left" style="top: 60px; left: 120px; width: 230px; --rotation: -5deg">
-    <img src="foto_masakecil.jpg" alt="Foto masa kecil" />
-    <span class="tooltip">Masa kecil yang ceria</span>
-  </div>
-  <div class="text-note torn-edge" style="top: 100px; left: 400px; width: 320px; --rotation: 2deg">
-    <h2>Selamat Ulang Tahun, Gloria!</h2>
-    <p>Semoga hari ini penuh kebahagiaan dan kenangan indah. Terima kasih sudah menjadi bagian dari cerita hidupku. Lagu ini selalu mengingatkanku pada momen spesial bersama kamu.</p>
-  </div>
-  <div class="photo-frame bottom-right" style="top: 320px; left: 180px; width: 200px; --rotation: 6deg">
-    <img src="foto_kecil2.jpg" alt="Foto masa kecil 2" />
-    <span class="tooltip">Momen lucu waktu kecil</span>
-  </div>
-  <div class="icon-coffee" style="top: 180px; left: 350px"></div>
-  <div class="icon-books" style="bottom: 10px; right: 10px"></div>
-  `,
 
   // Halaman 2: Momen Lucu & VN
   `
@@ -72,23 +56,30 @@ const pages = [
   </div>
   <div class="icon-coffee" style="top: 180px; left: 350px"></div>
   <div class="icon-books" style="bottom: 10px; right: 10px"></div>
-  `
+  `,
 ];
 
 // Fungsi navigasi halaman scrapbook tetap seperti sebelumnya
-const mainDisplay = document.getElementById('mainDisplay');
-const navBtns = document.querySelectorAll('.nav-btn');
+const mainDisplay = document.getElementById("mainDisplay");
+const navBtns = document.querySelectorAll(".nav-btn");
 
 navBtns.forEach((btn, idx) => {
-  btn.addEventListener('click', () => {
-    navBtns.forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
-    mainDisplay.classList.add('slide-out');
-    setTimeout(() => {
-      mainDisplay.innerHTML = pages[idx];
-      mainDisplay.classList.remove('slide-out');
-      mainDisplay.classList.add('slide-in');
-      setTimeout(() => mainDisplay.classList.remove('slide-in'), 600);
-    }, 400);
+  btn.addEventListener("click", () => {
+    navBtns.forEach((b) => b.classList.remove("active"));
+    btn.classList.add("active");
+    if (idx === 0) {
+      // Kembali ke halaman utama (reload atau tampilkan konten awal)
+      location.reload(); // cara paling mudah
+      // Atau, jika ingin tanpa reload, simpan konten awal di variabel lalu set innerHTML
+      // mainDisplay.innerHTML = initialContent;
+    } else {
+      mainDisplay.classList.add("slide-out");
+      setTimeout(() => {
+        mainDisplay.innerHTML = pages[idx - 1];
+        mainDisplay.classList.remove("slide-out");
+        mainDisplay.classList.add("slide-in");
+        setTimeout(() => mainDisplay.classList.remove("slide-in"), 600);
+      }, 400);
+    }
   });
 });
