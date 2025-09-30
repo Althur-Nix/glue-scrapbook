@@ -97,26 +97,24 @@ const navBtns = document.querySelectorAll(".nav-btn");
 const initialContent = mainDisplay.innerHTML; // simpan isi awal halaman 1
 
 function setupVNPlayers() {
-  document.querySelectorAll(".vn-player").forEach((player) => {
-    const btn = player.querySelector(".vn-play-btn");
-    const audio = player.querySelector(".vn-audio");
+  document.querySelectorAll('.vn-player').forEach(player => {
+    const btn = player.querySelector('.vn-play-btn');
+    const audio = player.querySelector('.vn-audio');
     if (btn && audio) {
       btn.onclick = () => {
         if (audio.paused) {
           // Pause all other VN audios
-          document.querySelectorAll(".vn-audio").forEach((a) => {
-            if (a !== audio) a.pause();
-          });
+          document.querySelectorAll('.vn-audio').forEach(a => { if (a !== audio) a.pause(); });
           audio.play();
-          btn.classList.add("playing");
+          btn.classList.add('playing');
         } else {
           audio.pause();
-          btn.classList.remove("playing");
+          btn.classList.remove('playing');
         }
       };
-      audio.onplay = () => btn.classList.add("playing");
-      audio.onpause = () => btn.classList.remove("playing");
-      audio.onended = () => btn.classList.remove("playing");
+      audio.onplay = () => btn.classList.add('playing');
+      audio.onpause = () => btn.classList.remove('playing');
+      audio.onended = () => btn.classList.remove('playing');
     }
   });
 }
