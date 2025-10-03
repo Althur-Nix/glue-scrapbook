@@ -15,7 +15,7 @@ const pages = [
   </div>
   <div class="text-note torn-edge" style="top: 180px; left: 400px; width: 320px; --rotation: 1deg; z-index:12;">
     <h2>Our First Date</h2>
-    <p>Hari-hari penuh tawa dan cerita konyol. Semoga selalu ada kebahagiaan seperti ini di hidupmu!</p>
+    <p>2 Tahun berlalu, Aku masih inget semua tentang moment pada hari kita jalan berdua, pas waktu itu aku ngerasa seneng banget bisa jalan berdua sama kamu, dan aku berharap kita bisa mengulanginya lagi suatu saat nanti.</p>
   </div>
   <div class="icon-coffee" style="top: 120px; left: 350px"></div>
   `,
