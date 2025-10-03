@@ -14,7 +14,7 @@ const pages = [
     <span class="tooltip">First Date :></span>
   </div>
   <div class="text-note torn-edge" style="top: 180px; left: 400px; width: 320px; --rotation: 1deg; z-index:12;">
-    <h2>Momen Lucu Bareng</h2>
+    <h2>Our First Date</h2>
     <p>Hari-hari penuh tawa dan cerita konyol. Semoga selalu ada kebahagiaan seperti ini di hidupmu!</p>
   </div>
   <div class="icon-coffee" style="top: 120px; left: 350px"></div>
