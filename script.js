@@ -15,8 +15,8 @@ const pages = [
   </div>
   <div class="text-note torn-edge" style="top: 180px; left: 400px; width: 320px; --rotation: 1deg; z-index:12;">
     <h2>Moment Pertama Kita</h2>
-    <p>2 Tahun berlalu, Aku masih inget semua tentang moment pada hari kita jalan berdua, pas waktu itu aku ngerasa seneng banget bisa jalan berdua sama kamu, dan aku berharap kita bisa mengulanginya lagi suatu saat nanti.</p>
-  </div>
+    <p>Ga kerasa ya udah 2 tahun aja lewat. Tapi sumpah, aku masih inget jelas banget waktu pertama kali kita jalan bareng. Dari awal agak canggung, kikuk gitu, tapi malah jadi lucu kalau diinget-inget. Hari itu rasanya beda aja, aku bener-bener ngerasa seneng bisa bareng sama kamu. Sampai sekarang pun momen itu masih kebawa terus diingetanku. Kadang kalau lagi keinget, rasanya pengen banget ada kesempatan buat ngalamin hal kayak gitu lagi sama kamu</p>
+  </div>  
   <div class="icon-coffee" style="top: 120px; left: 350px"></div>
   `,
 
