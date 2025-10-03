@@ -17,18 +17,12 @@ const pages = [
     <h2>Momen Lucu Bareng</h2>
     <p>Hari-hari penuh tawa dan cerita konyol. Semoga selalu ada kebahagiaan seperti ini di hidupmu!</p>
   </div>
-  <div class="vn-player decorated-vn" style="top: 320px; left: 430px;">
+  <div class="vn-player decorated-vn" style="top: 270px; left: 470px;">
     <div class="vn-decor">
       <span class="vn-icon"></span>
-      <button class="vn-play-btn" aria-label="Play VN">
-        <svg width="28" height="28" viewBox="0 0 32 32">
-          <circle cx="16" cy="16" r="15" fill="#b8860b" stroke="#4d2c1e" stroke-width="2"/>
-          <polygon points="12,10 24,16 12,22" fill="#fffbe6"/>
-        </svg>
-      </button>
       <span class="vn-label">Voice Note: Cerita Lucu</span>
     </div>
-    <audio class="vn-audio" src="voice_note1.mp3" style="display:none;"></audio>
+    <audio class="vn-audio" src="voice_note1.mp3" controls style="width:180px; margin-top:8px;"></audio>
   </div>
   <div class="icon-coffee" style="top: 120px; left: 350px"></div>
   `,
@@ -77,18 +71,12 @@ const pages = [
     <h2>Terima Kasih Untuk Segalanya</h2>
     <p>Semua kenangan ini akan selalu aku simpan. Terima kasih sudah menjadi bagian penting dalam hidupku. Semoga kamu selalu bahagia!</p>
   </div>
-  <div class="vn-player decorated-vn" style="top: 320px; left: 430px;">
+  <div class="vn-player decorated-vn" style="top: 270px; left: 470px;">
     <div class="vn-decor">
       <span class="vn-icon"></span>
-      <button class="vn-play-btn" aria-label="Play VN">
-        <svg width="28" height="28" viewBox="0 0 32 32">
-          <circle cx="16" cy="16" r="15" fill="#b8860b" stroke="#4d2c1e" stroke-width="2"/>
-          <polygon points="12,10 24,16 12,22" fill="#fffbe6"/>
-        </svg>
-      </button>
       <span class="vn-label">Voice Note: Pesan Penutup</span>
     </div>
-    <audio class="vn-audio" src="voice_note2.mp3" style="display:none;"></audio>
+    <audio class="vn-audio" src="voice_note2.mp3" controls style="width:180px; margin-top:8px;"></audio>
   </div>
   <div class="icon-coffee" style="top: 120px; left: 350px"></div>
   <div class="icon-books" style="bottom: 10px; right: 10px"></div>
