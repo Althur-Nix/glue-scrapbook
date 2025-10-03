@@ -2,7 +2,7 @@ const pages = [
   // Halaman 2: tanpa VN
   `
   <div class="photo-frame top-left" style="top: 60px; left: 120px; width: 210px; --rotation: -7deg">
-    <img src="foto_lucu1.jpg" alt="Momen lucu 1" />
+    <img src="foto4.jpg" alt="Momen lucu 1" />
     <span class="tooltip">Ekspresi gokil</span>
   </div>
   <div class="photo-frame top-right" style="top: 60px; left: 600px; width: 200px; --rotation: 8deg">
