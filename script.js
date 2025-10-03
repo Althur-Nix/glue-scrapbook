@@ -6,7 +6,7 @@ const pages = [
     
   </div>  
   <div class="photo-frame top-right" style="top: 60px; left: 600px; width: 200px; --rotation: 8deg">
-    <img src="foto7.jpg" alt="Momen lucu 2" />
+    <img src="foto8.jpg" alt="Momen lucu 2" />
     <span class="tooltip">First Date :></span>
   </div>
   <div class="photo-frame bottom-left" style="top: 340px; left: 150px; width: 220px; --rotation: 4deg">
