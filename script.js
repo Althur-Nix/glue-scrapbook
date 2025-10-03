@@ -3,11 +3,11 @@ const pages = [
   `
   <div class="photo-frame top-left" style="top: 60px; left: 120px; width: 210px; --rotation: -7deg">
     <img src="foto4.jpg" alt="Momen lucu 1" />
-    <span class="tooltip">Ekspresi gokil</span>
-  </div>
+    
+  </div>  
   <div class="photo-frame top-right" style="top: 60px; left: 600px; width: 200px; --rotation: 8deg">
-    <img src="foto_lucu2.jpg" alt="Momen lucu 2" />
-    <span class="tooltip">Candid seru</span>
+    <img src="foto5.jpg" alt="Momen lucu 2" />
+    <span class="tooltip">First Da</span>
   </div>
   <div class="photo-frame bottom-left" style="top: 340px; left: 150px; width: 220px; --rotation: 4deg">
     <img src="foto_lucu3.jpg" alt="Momen lucu 3" />
