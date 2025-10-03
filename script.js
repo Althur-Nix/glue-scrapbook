@@ -9,7 +9,7 @@ const pages = [
     <img src="foto_lucu2.jpg" alt="Momen lucu 2" />
     <span class="tooltip">Candid seru</span>
   </div>
-  <div class="photo-frame bottom-left" style="top: 340px; left: 180px; width: 220px; --rotation: 4deg">
+  <div class="photo-frame bottom-left" style="top: 340px; left: 150px; width: 220px; --rotation: 4deg">
     <img src="foto_lucu3.jpg" alt="Momen lucu 3" />
     <span class="tooltip">Tertawa bareng</span>
   </div>
