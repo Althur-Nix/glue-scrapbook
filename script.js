@@ -1,5 +1,5 @@
 const pages = [
-  // Halaman 2: 3 foto, notes & VN tidak menumpuk
+  // Halaman 2: VN di bawah notes, tidak menumpuk
   `
   <div class="photo-frame top-left" style="top: 60px; left: 120px; width: 210px; --rotation: -7deg">
     <img src="foto_lucu1.jpg" alt="Momen lucu 1" />
@@ -17,7 +17,7 @@ const pages = [
     <h2>Momen Lucu Bareng</h2>
     <p>Hari-hari penuh tawa dan cerita konyol. Semoga selalu ada kebahagiaan seperti ini di hidupmu!</p>
   </div>
-  <div class="vn-player decorated-vn" style="top: 320px; left: 500px;">
+  <div class="vn-player decorated-vn" style="top: 320px; left: 430px;">
     <div class="vn-decor">
       <span class="vn-icon"></span>
       <button class="vn-play-btn" aria-label="Play VN">
@@ -59,7 +59,7 @@ const pages = [
   <div class="icon-books" style="bottom: 10px; right: 10px"></div>
   `,
 
-  // Halaman 4: 3 foto, notes & VN tidak menumpuk
+  // Halaman 4: VN di bawah notes, tidak menumpuk
   `
   <div class="photo-frame top-left" style="top: 90px; left: 180px; width: 200px; --rotation: -6deg">
     <img src="foto_berkesan1.jpg" alt="Momen berkesan 1" />
@@ -69,7 +69,7 @@ const pages = [
     <img src="foto_berkesan2.jpg" alt="Momen berkesan 2" />
     <span class="tooltip">Kenangan indah</span>
   </div>
-  <div class="photo-frame bottom-left" style="top: 340px; left: 150px; width: 220px; --rotation: 7deg">
+  <div class="photo-frame bottom-left" style="top: 340px; left: 400px; width: 220px; --rotation: 7deg">
     <img src="foto_berkesan3.jpg" alt="Momen berkesan 3" />
     <span class="tooltip">Tak terlupakan</span>
   </div>
@@ -77,7 +77,7 @@ const pages = [
     <h2>Terima Kasih Untuk Segalanya</h2>
     <p>Semua kenangan ini akan selalu aku simpan. Terima kasih sudah menjadi bagian penting dalam hidupku. Semoga kamu selalu bahagia!</p>
   </div>
-  <div class="vn-player decorated-vn" style="top: 320px; left: 520px;">
+  <div class="vn-player decorated-vn" style="top: 320px; left: 430px;">
     <div class="vn-decor">
       <span class="vn-icon"></span>
       <button class="vn-play-btn" aria-label="Play VN">
