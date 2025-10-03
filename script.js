@@ -1,5 +1,5 @@
 const pages = [
-  // Halaman 2: VN di bawah notes, tidak menumpuk
+  // Halaman 2: VN dihapus, hanya foto dan notes
   `
   <div class="photo-frame top-left" style="top: 60px; left: 120px; width: 210px; --rotation: -7deg">
     <img src="foto_lucu1.jpg" alt="Momen lucu 1" />
@@ -17,17 +17,10 @@ const pages = [
     <h2>Momen Lucu Bareng</h2>
     <p>Hari-hari penuh tawa dan cerita konyol. Semoga selalu ada kebahagiaan seperti ini di hidupmu!</p>
   </div>
-  <div class="vn-player decorated-vn" style="top: 340px; left: 430px;">
-    <div class="vn-decor">
-      <span class="vn-icon"></span>
-      <span class="vn-label">Voice Note: Cerita Lucu</span>
-    </div>
-    <audio class="vn-audio" src="voice_note1.mp3" controls style="width:180px; margin-top:8px;"></audio>
-  </div>
   <div class="icon-coffee" style="top: 120px; left: 350px"></div>
   `,
 
-  // Halaman 3: 4 foto, notes tidak menumpuk dengan foto terakhir
+  // Halaman 3: tetap 4 foto, notes tidak menumpuk dengan foto terakhir
   `
   <div class="photo-frame top-left" style="top: 70px; left: 110px; width: 180px; --rotation: -5deg">
     <img src="foto_bebas1.jpg" alt="Momen santai" />
@@ -53,7 +46,7 @@ const pages = [
   <div class="icon-books" style="bottom: 10px; right: 10px"></div>
   `,
 
-  // Halaman 4: VN di bawah notes, tidak menumpuk
+  // Halaman 4: VN dihapus, hanya foto dan notes
   `
   <div class="photo-frame top-left" style="top: 90px; left: 180px; width: 200px; --rotation: -6deg">
     <img src="foto_berkesan1.jpg" alt="Momen berkesan 1" />
@@ -70,13 +63,6 @@ const pages = [
   <div class="text-note torn-edge" style="top: 180px; left: 400px; width: 320px; --rotation: 0deg; z-index:12;">
     <h2>Terima Kasih Untuk Segalanya</h2>
     <p>Semua kenangan ini akan selalu aku simpan. Terima kasih sudah menjadi bagian penting dalam hidupku. Semoga kamu selalu bahagia!</p>
-  </div>
-  <div class="vn-player decorated-vn" style="top: 340px; left: 430px;">
-    <div class="vn-decor">
-      <span class="vn-icon"></span>
-      <span class="vn-label">Voice Note: Pesan Penutup</span>
-    </div>
-    <audio class="vn-audio" src="voice_note2.mp3" controls style="width:180px; margin-top:8px;"></audio>
   </div>
   <div class="icon-coffee" style="top: 120px; left: 350px"></div>
   <div class="icon-books" style="bottom: 10px; right: 10px"></div>
