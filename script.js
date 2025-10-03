@@ -1,11 +1,11 @@
 const pages = [
-  // Halaman 2: tanpa VN
+ 
   `
   <div class="photo-frame top-left" style="top: 60px; left: 120px; width: 210px; --rotation: -7deg">
     <img src="foto4.jpg" alt="Momen lucu 1" />
     
   </div>  
-  <div class="photo-frame top-right" style="top: 60px; left: 700px; width: 200px; --rotation: 8deg">
+  <div class="photo-frame top-right" style="top: 60px; left: 800px; width: 200px; --rotation: 8deg">
     <img src="foto8.jpg" alt="Momen lucu 2" />
     <span class="tooltip">First Date :></span>
   </div>
@@ -13,7 +13,7 @@ const pages = [
     <img src="foto5.jpg" alt="Momen lucu 3" />
     <span class="tooltip">First Date :></span>
   </div>
-  <div class="text-note torn-edge" style="top: 100px; left: 400px; width: 320px; --rotation: 1deg; z-index:12;">
+  <div class="text-note torn-edge" style="top: 80px; left: 400px; width: 320px; --rotation: 1deg; z-index:12;">
     <h2>Moment Pertama Kita</h2>
     <p>Ga kerasa ya udah 2 tahun aja lewat. Tapi sumpah, aku masih inget jelas banget waktu pertama kali kita jalan bareng. yaa walaupun awalnya kerasa akward banget WKWKWKWK, walau gitu hari itu rasanya beda aja, aku bener-bener ngerasa seneng bisa bareng sama kamu. Sampe sekarang pun momen itu masih kebawa terus diingetanku. Kadang kalau lagi keinget,Jujur rasanya pengen banget ada kesempatan buat ngalamin hal kayak gitu lagi sama kamu</p>
   </div>  
