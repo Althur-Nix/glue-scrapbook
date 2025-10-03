@@ -6,12 +6,12 @@ const pages = [
     
   </div>  
   <div class="photo-frame top-right" style="top: 60px; left: 600px; width: 200px; --rotation: 8deg">
-    <img src="foto5.jpg" alt="Momen lucu 2" />
-    <span class="tooltip">First Da</span>
+    <img src="foto6.jpg" alt="Momen lucu 2" />
+    <span class="tooltip">First Date :></span>
   </div>
   <div class="photo-frame bottom-left" style="top: 340px; left: 150px; width: 220px; --rotation: 4deg">
     <img src="foto5.jpg" alt="Momen lucu 3" />
-    <span class="tooltip">First Date</span>
+    <span class="tooltip">First Date :></span>
   </div>
   <div class="text-note torn-edge" style="top: 180px; left: 400px; width: 320px; --rotation: 1deg; z-index:12;">
     <h2>Momen Lucu Bareng</h2>
