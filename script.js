@@ -13,8 +13,8 @@ const pages = [
     <img src="foto5.jpg" alt="Momen lucu 3" />
     <span class="tooltip">First Date :></span>
   </div>
-  <div class="photo-frame bottom-right" style="top: 60px; left: 800px; width: 200px; --rotation: 8deg">
-    <img src="foto4.jpg" alt="Momen lucu 2" />
+  <div class="photo-frame bottom-left" style="top: 60px; left: 800px; width: 200px; --rotation: 8deg">
+    <img src="foto4.jpg" alt="Momen lucu 4" />
     <span class="tooltip">First Date :></span>
   </div>
   <div class="text-note torn-edge" style="top: 80px; left: 400px; width: 320px; --rotation: 1deg; z-index:12;">
