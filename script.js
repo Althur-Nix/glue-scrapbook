@@ -17,6 +17,13 @@ const pages = [
     <h2>Momen Lucu Bareng</h2>
     <p>Hari-hari penuh tawa dan cerita konyol. Semoga selalu ada kebahagiaan seperti ini di hidupmu!</p>
   </div>
+  <div class="vn-player decorated-vn" style="top: 180px; left: 740px;">
+    <div class="vn-decor">
+      <span class="vn-icon"></span>
+      <span class="vn-label">Voice Note: Cerita Lucu</span>
+    </div>
+    <audio class="vn-audio" src="voice_note1.mp3" controls style="width:180px; margin-top:8px;"></audio>
+  </div>
   <div class="icon-coffee" style="top: 120px; left: 350px"></div>
   `,
 
@@ -63,6 +70,13 @@ const pages = [
   <div class="text-note torn-edge" style="top: 180px; left: 400px; width: 320px; --rotation: 0deg; z-index:12;">
     <h2>Terima Kasih Untuk Segalanya</h2>
     <p>Semua kenangan ini akan selalu aku simpan. Terima kasih sudah menjadi bagian penting dalam hidupku. Semoga kamu selalu bahagia!</p>
+  </div>
+  <div class="vn-player decorated-vn" style="top: 180px; left: 740px;">
+    <div class="vn-decor">
+      <span class="vn-icon"></span>
+      <span class="vn-label">Voice Note: Pesan Penutup</span>
+    </div>
+    <audio class="vn-audio" src="voice_note2.mp3" controls style="width:180px; margin-top:8px;"></audio>
   </div>
   <div class="icon-coffee" style="top: 120px; left: 350px"></div>
   <div class="icon-books" style="bottom: 10px; right: 10px"></div>
