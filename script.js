@@ -14,7 +14,7 @@ const pages = [
     <span class="tooltip">First Date :></span>
   </div>
   <div class="photo-frame bottom-right" style="top: 60px; left: 800px; width: 200px; --rotation: 8deg">
-    <img src="foto8.jpg" alt="Momen lucu 2" />
+    <img src="foto4.jpg" alt="Momen lucu 2" />
     <span class="tooltip">First Date :></span>
   </div>
   <div class="text-note torn-edge" style="top: 80px; left: 400px; width: 320px; --rotation: 1deg; z-index:12;">
