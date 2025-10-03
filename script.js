@@ -17,7 +17,7 @@ const pages = [
     <h2>Momen Lucu Bareng</h2>
     <p>Hari-hari penuh tawa dan cerita konyol. Semoga selalu ada kebahagiaan seperti ini di hidupmu!</p>
   </div>
-  <div class="vn-player decorated-vn" style="top: 270px; left: 470px;">
+  <div class="vn-player decorated-vn" style="top: 340px; left: 430px;">
     <div class="vn-decor">
       <span class="vn-icon"></span>
       <span class="vn-label">Voice Note: Cerita Lucu</span>
@@ -71,7 +71,7 @@ const pages = [
     <h2>Terima Kasih Untuk Segalanya</h2>
     <p>Semua kenangan ini akan selalu aku simpan. Terima kasih sudah menjadi bagian penting dalam hidupku. Semoga kamu selalu bahagia!</p>
   </div>
-  <div class="vn-player decorated-vn" style="top: 270px; left: 470px;">
+  <div class="vn-player decorated-vn" style="top: 340px; left: 430px;">
     <div class="vn-decor">
       <span class="vn-icon"></span>
       <span class="vn-label">Voice Note: Pesan Penutup</span>
