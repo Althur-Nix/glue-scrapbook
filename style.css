@@ -34,6 +34,10 @@ body {
     margin: 0;
     box-sizing: border-box;
   }
+  .scrapbook-content-area {
+    flex-direction: column !important;
+    gap: 0;
+  }
 }
 
 /* Scrapbook header */
