@@ -223,6 +223,7 @@ audio::-webkit-media-controls-time-remaining-display {
 }
 .photo-frame.bottom-left::before {
   bottom: -5px;
+
   left: -5px;
   transform: rotate(10deg);
 }
@@ -232,7 +233,7 @@ audio::-webkit-media-controls-time-remaining-display {
   transform: rotate(-15deg);
 }
 
-/* Tooltip Styling: desktop tetap, mobile muncul di bawah gambar */
+/* Tooltip Styling */
 .photo-frame .tooltip {
   display: none;
   position: absolute;
@@ -252,24 +253,33 @@ audio::-webkit-media-controls-time-remaining-display {
   display: block;
 }
 
-/* Responsive: tooltip tetap di bawah gambar, tidak dipisah */
+/* Responsive: tooltip tetap di bawah gambar, tidak di bawah halaman */
 @media (max-width: 600px) {
+  .photo-frame {
+    position: relative !important;
+    width: 95vw !important;
+    max-width: 98vw;
+    margin: 12px auto;
+    left: unset !important;
+    top: unset !important;
+    transform: none !important;
+    animation: none;
+  }
   .photo-frame .tooltip {
-    position: static;
-    display: none;
-    margin-top: 8px;
-    left: unset;
-    bottom: unset;
-    box-shadow: none;
+    position: absolute;
+    left: 50%;
+    bottom: 8px;
+    transform: translateX(-50%);
+    margin-top: 0;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.15);
     font-size: 1em;
     background: #b8860b;
     color: #fff;
     border-radius: 6px;
     padding: 6px 14px;
     text-align: center;
-  }
-  .photo-frame.active .tooltip {
-    display: block;
+    width: max-content;
+    max-width: 90vw;
   }
 }
 
