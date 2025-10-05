@@ -10,7 +10,7 @@ const pages = [
   </div>
   <div class="photo-frame bottom-left" style="top: 340px; left: 150px; width: 220px; --rotation: 4deg">
     <img src="miaw.jpg" alt="glo dan miaw" />
-    <span class="tooltip">First Date :></span>
+    <span class="tooltip">gloo & lolipop?? (lupa jeje)</span>
   </div>
   <div class="text-note torn-edge" style="top: 80px; left: 400px; width: 340px; --rotation: 1deg; z-index:12;">
     <h2>Moment Pertama Kita</h2>
