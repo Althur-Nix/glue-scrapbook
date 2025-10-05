@@ -66,3 +66,7 @@ audio.addEventListener("play", () => {
 audio.addEventListener("pause", () => {
   audioLabel.textContent = "Play Song";
 });
+
+if (window.innerWidth < 700) {
+  document.getElementById("mobile-recommend").style.display = "flex";
+}
