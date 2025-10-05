@@ -268,7 +268,7 @@ audio::-webkit-media-controls-time-remaining-display {
   .photo-frame .tooltip {
     position: absolute;
     left: 50%;
-    bottom: 8px;
+    bottom: 10px;
     transform: translateX(-50%);
     margin-top: 0;
     box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.15);
@@ -280,6 +280,11 @@ audio::-webkit-media-controls-time-remaining-display {
     text-align: center;
     width: max-content;
     max-width: 90vw;
+    z-index: 99;
+    display: none;
+  }
+  .photo-frame.active .tooltip {
+    display: block;
   }
 }
 
