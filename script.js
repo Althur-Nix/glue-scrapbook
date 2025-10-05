@@ -69,27 +69,31 @@ audio.addEventListener("pause", () => {
 
 function setupMobileTooltips() {
   if (window.innerWidth <= 600) {
-    document.querySelectorAll('.photo-frame').forEach(frame => {
+    document.querySelectorAll(".photo-frame").forEach((frame) => {
       frame.onclick = function () {
         // Hilangkan active dari semua frame lain
-        document.querySelectorAll('.photo-frame').forEach(f => {
-          if (f !== frame) f.classList.remove('active');
+        document.querySelectorAll(".photo-frame").forEach((f) => {
+          if (f !== frame) f.classList.remove("active");
         });
         // Toggle active pada frame yang diklik
-        frame.classList.toggle('active');
+        frame.classList.toggle("active");
       };
     });
   } else {
     // Desktop: hapus event click agar tetap hover
-    document.querySelectorAll('.photo-frame').forEach(frame => {
+    document.querySelectorAll(".photo-frame").forEach((frame) => {
       frame.onclick = null;
-      frame.classList.remove('active');
+      frame.classList.remove("active");
     });
   }
 }
 
 // Panggil saat halaman dimuat dan setiap ganti halaman
 setupMobileTooltips();
-window.addEventListener('resize', setupMobileTooltips);
+window.addEventListener("resize", setupMobileTooltips);
 
 // Jika ada renderPage atau ganti halaman, panggil juga setupMobileTooltips()
+
+if (window.innerWidth < 700) {
+  document.getElementById("mobile-recommend").style.display = "flex";
+}

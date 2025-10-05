@@ -638,3 +638,37 @@ audio::-webkit-media-controls-time-remaining-display {
     transform: translateX(0) scale(1);
   }
 }
+
+#mobile-recommend {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(245, 222, 179, 0.85);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.mobile-recommend-box {
+  background: #fffbe6;
+  border: 2px dashed #b8860b;
+  border-radius: 18px;
+  padding: 32px 24px;
+  box-shadow: 0 4px 24px rgba(112, 66, 20, 0.12);
+  text-align: center;
+  font-family: "Lora", serif;
+  color: #7a4a1e;
+}
+.mobile-recommend-box button {
+  margin-top: 18px;
+  padding: 8px 24px;
+  border-radius: 8px;
+  border: none;
+  background: #b8860b;
+  color: #fffbe6;
+  font-family: "Dancing Script", cursive;
+  font-size: 1em;
+  cursor: pointer;
+}
