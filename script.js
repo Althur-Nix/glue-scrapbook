@@ -13,8 +13,9 @@ const pages = [
     <span class="tooltip">gloo & lolipop?? (lupa jeje)</span>
   </div>
   <div class="text-note torn-edge" style="top: 80px; left: 400px; width: 340px; --rotation: 1deg; z-index:12;">
-    <h2>Moment Pertama Kita</h2>
-    <p>Ga kerasa ya udah 2 tahun aja lewat. Tapi sumpah, aku masih inget jelas banget waktu pertama kali kita jalan bareng. yaa walaupun awalnya kerasa akward banget WKWKWKWK, walau gitu hari itu rasanya beda aja, aku bener-bener ngerasa seneng bisa bareng sama kamu. Sampe sekarang pun momen itu masih kebawa terus diingetanku. Kadang kalau lagi keinget, jujur rasanya pengen banget ada kesempatan buat ngalamin hal kayak gitu lagi sama kamu.</p>
+    <h2>hmmhmhmhm</h2>
+    <p>Semangat terus ngejar semua hal yang kamu pengen capai.Aku yakin kamu bisa, sebelumnya aku pengen ucapin makasih karena kamu aku jadi berubah jadi orang yang lebih baik-^, Oiya doain aku yaaa, nanti aku ikutan lomba coding hehe terus aku juga lagi belajar buat kejar PTN impian aku ^-^ segitu aja si DADAHHHHHHH</p>
+    <p>aku ga akan ganggu kamu lagi ^-^</p>
   </div>
   <div class="icon-coffee" style="top: 120px; left: 350px"></div>
   `,
