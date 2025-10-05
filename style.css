@@ -24,6 +24,14 @@ body {
   position: relative;
 }
 
+/* Scrapbook content area tetap row di desktop */
+.scrapbook-content-area {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  gap: 0;
+}
+
 /* Responsive: hanya ubah di mobile */
 @media (max-width: 600px) {
   .scrapbook-container {
