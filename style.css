@@ -232,7 +232,7 @@ audio::-webkit-media-controls-time-remaining-display {
   transform: rotate(-15deg);
 }
 
-/* Tooltip Styling */
+/* Tooltip Styling: desktop tetap, mobile muncul di bawah gambar */
 .photo-frame .tooltip {
   display: none;
   position: absolute;
@@ -247,8 +247,30 @@ audio::-webkit-media-controls-time-remaining-display {
   box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.15);
   z-index: 20;
 }
-.photo-frame:hover .tooltip {
+.photo-frame:hover .tooltip,
+.photo-frame.active .tooltip {
   display: block;
+}
+
+/* Responsive: tooltip tetap di bawah gambar, tidak dipisah */
+@media (max-width: 600px) {
+  .photo-frame .tooltip {
+    position: static;
+    display: none;
+    margin-top: 8px;
+    left: unset;
+    bottom: unset;
+    box-shadow: none;
+    font-size: 1em;
+    background: #b8860b;
+    color: #fff;
+    border-radius: 6px;
+    padding: 6px 14px;
+    text-align: center;
+  }
+  .photo-frame.active .tooltip {
+    display: block;
+  }
 }
 
 /* Text Note Styling */
