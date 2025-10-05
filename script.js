@@ -1,14 +1,14 @@
 const pages = [
   // Halaman 2: Ucapan & Kenangan
   `
-  <div class="photo-frame top-left" style="top: 60px; left: 120px; width: 230px; --rotation: -7deg">
+  <div class="photo-frame top-left" style="top: 7px; left: 120px; width: 230px; --rotation: -7deg">
     <img src="terbang.jpg" alt="terbangbjir" />
   </div>
   <div class="photo-frame top-right" style="top: 60px; left: 800px; width: 200px; --rotation: 8deg">
     <img src="foto9.jpg" alt="prosesscrap" />
     <span class="tooltip">Bentuk awal scrapnya</span>
   </div>
-  <div class="photo-frame bottom-left" style="top: 340px; left: 150px; width: 220px; --rotation: 4deg">
+  <div class="photo-frame bottom-left" style="top: 250px; left: 150px; width: 220px; --rotation: 4deg">
     <img src="miaw.jpg" alt="glo dan miaw" />
     <span class="tooltip">gloo & lolipop?? (lupa jeje)</span>
   </div>
