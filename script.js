@@ -14,8 +14,8 @@ const pages = [
   </div>
   <div class="text-note torn-edge" style="top: 80px; left: 400px; width: 340px; --rotation: 1deg; z-index:12;">
     <h2>hmmhmhmhm</h2>
-    <p>Semangat terus ngejar semua hal yang kamu pengen capai.Aku yakin kamu bisa, sebelumnya aku pengen ucapin makasih karena kamu aku jadi berubah jadi orang yang lebih baik-^, Oiya doain aku yaaa, nanti aku ikutan lomba coding hehe terus aku juga lagi belajar buat kejar PTN impian aku ^-^ segitu aja si DADAHHHHHHH</p>
-    <p>aku ga akan ganggu kamu lagi ^-^</p>
+    <p>Semangat terus ngejar semua hal yang kamu pengen capai.Aku yakin kamu bisa, sebelumnya aku pengen ucapin makasih karena kamu aku jadi berubah jadi orang yang lebih baik, Oiya doain aku yaaa, nanti aku ikutan lomba coding hehe terus aku juga lagi belajar buat kejar PTN impian aku ^-^ segitu aja si DADAHHHHHHH</p>
+    <p>aku ga akan ganggu kamu lagi hehe</p>
   </div>
   <div class="icon-coffee" style="top: 120px; left: 350px"></div>
   `,
