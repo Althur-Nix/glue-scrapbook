@@ -488,155 +488,62 @@ audio::-webkit-media-controls-time-remaining-display {
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
-  /* page container */
-  body {
-    padding: 8px;
+  /* pastikan konten tetap stack, dan nav terlihat di bawah konten */
+  .scrapbook-content-area {
+    flex-direction: column !important;
   }
-  .scrapbook-container {
-    width: 96%;
-    max-width: none;
-    padding: 14px;
-    box-shadow: none;
-    border-radius: 12px;
-    margin: 12px auto;
+
+  /* tampilkan kembali tombol nav tapi dalam bar horizontal yang terpusat */
+  .vertical-nav {
+    display: flex !important;
+    position: static !important;
+    flex-direction: row !important;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin: 18px auto 8px auto; /* ruang antar konten dan footer */
+    padding: 8px 0;
+    width: 100%;
+    order: 1; /* pastikan muncul setelah .main-display-area */
+    z-index: 30;
     box-sizing: border-box;
   }
 
-  /* header */
-  .scrapbook-header h1 {
-    font-size: 1.8rem;
-    line-height: 1.1;
-    margin-bottom: 6px;
+  /* tombol nav lebih kecil, tetap tappable, tema gold */
+  .nav-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+    border-radius: 50%;
+    border-width: 2px;
+    padding: 0;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+    transition: transform 0.12s ease, background 0.12s ease;
   }
-  .audio-player-wrapper {
-    margin-top: 8px;
-  }
-  .audio-label {
-    font-size: 0.95rem;
-  }
-
-  /* stack main content vertically */
-  .scrapbook-content-area {
-    flex-direction: column !important;
-    gap: 16px;
-    align-items: stretch;
+  .nav-btn:hover,
+  .nav-btn.active {
+    transform: scale(1.06);
   }
 
-  /* hide the vertical sidebar pagination on mobile for cleaner view */
-  .vertical-nav {
-    display: none !important;
-  }
-
-  /* timeline/sidebar hide if present */
+  /* jika ada container timeline/sidebar tetap disembunyikan */
   .timeline-section {
     display: none !important;
   }
 
-  /* main display becomes a normal flow column */
-  .main-display-area {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    min-height: auto;
-    padding-bottom: 8px;
-  }
-
-  /* photo frames: remove absolute/rotation, center and stack */
-  .photo-frame {
-    position: static !important;
-    width: 92% !important;
-    max-width: 720px;
-    margin: 12px auto !important;
-    transform: none !important; /* remove rotation */
-    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
-    padding: 8px;
-    border-radius: 6px;
-  }
-  .photo-frame img {
-    width: 100%;
-    height: auto;
-    display: block;
-  }
-  /* reduce washi-tape sizes on mobile so they don't overflow */
-  .photo-frame::before,
-  .photo-frame::after {
-    width: 36px;
-    height: 12px;
-  }
-
-  /* ensure photo tooltip stays attached to the frame (handled by JS) */
-  .photo-frame {
-    overflow: visible;
-  }
-
-  /* text notes: flow normally below/above photos, readable */
-  .text-note {
-    position: static !important;
-    width: 92% !important;
-    max-width: 720px;
-    margin: 10px auto !important;
-    transform: none !important;
-    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
-    padding: 14px;
-    font-size: 1rem;
-    line-height: 1.5;
-    border-radius: 8px;
-  }
-  .text-note.torn-edge {
-    /* keep torn look but avoid huge clip on small screens */
-    clip-path: polygon(
-      4% 8%,
-      12% 3%,
-      88% 3%,
-      96% 8%,
-      96% 92%,
-      88% 97%,
-      12% 97%,
-      4% 92%
-    );
-  }
-
-  /* small helpers for photo description / tooltip behavior */
-  .photo-frame .tooltip {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: 10px;
-    display: none;
-    z-index: 50;
-    white-space: normal;
-    max-width: 90%;
-  }
-  .photo-frame.active .tooltip,
-  .photo-frame:hover .tooltip {
-    display: block;
-  }
-
-  /* hide decorative icons on mobile */
-  .icon-quill,
-  .icon-books,
-  .icon-coffee,
-  .paperclip,
-  .icon-star {
-    display: none !important;
-  }
-
-  /* nav at bottom (optional) - keep footer simple */
+  /* beri jarak yang cukup sebelum footer */
   .scrapbook-footer {
-    padding-top: 12px;
-    margin-top: 14px;
-    font-size: 0.85rem;
+    margin-top: 22px;
   }
 
-  /* ensure animations don't cause layout jumps on mobile */
-  .photo-frame,
-  .text-note {
-    animation: none !important;
+  /* pastikan nav tidak menimpa konten */
+  .main-display-area {
+    order: 0;
+    width: 100%;
   }
 }
 
-/* Tambahan responsive untuk mobile */
+/* ...existing code... */
+
 @media (max-width: 600px) {
   .scrapbook-container {
     width: 100%;
