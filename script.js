@@ -6,7 +6,7 @@ const pages = [
   </div>
   <div class="photo-frame top-right" style="top: 60px; left: 800px; width: 200px; --rotation: 8deg">
     <img src="hmm.jpg" alt="prosesscrap" />
-    <span class="tooltip">Bentuk awal scrapnya</span>
+    <span class="tooltip">gatau kenapa ini merem</span>
   </div>
   <div class="photo-frame bottom-left" style="top: 250px; left: 150px; width: 220px; --rotation: 4deg">
     <img src="miaw.jpg" alt="glo dan miaw" />
@@ -14,14 +14,14 @@ const pages = [
   </div>
   <div class="text-note torn-edge" style="top: 80px; left: 400px; width: 340px; --rotation: 1deg; z-index:12;">
     <h2>hmmhmhmhm</h2>
-    <p>Semangat terus ngejar semua hal yang kamu pengen capai.Aku yakin kamu bisa, sebelumnya aku pengen ucapin makasih karena kamu aku jadi berubah jadi orang yang lebih baik, Oiya doain aku yaaa, nanti aku ikutan lomba coding hehe terus aku juga lagi belajar buat kejar PTN impian aku ^-^ segitu aja si DADAHHHHHHH</p>
+    <p>Semangat terus ngejar semua hal yang kamu pengen capai.Aku yakin kamu bisa, sebelumnya aku pengen ucapin makasih karena kamu aku jadi berubah jadi orang yang lebih baik, Oiya doain aku yaaa, nanti aku ikutan lomba coding hehe terus aku juga lagi belajar buat kejar PTN impian aku ^-^ segitu aja si, makasi buat segalanya DADAHHHHHHH</p>
     <p>aku ga akan ganggu kamu lagi hehe</p>
   </div>
   <div class="icon-coffee" style="top: 120px; left: 350px"></div>
   `,
   `
   <div class="photo-frame center" style="top: 40px; left: 480px; width: 240px; --rotation: -3deg">
-    <img src="caturs.jpg" alt="momen-berharga" style="width:100%;height:auto;display:block;" />
+    <img src="caturu.jpg" alt="momen-berharga" style="width:100%;height:auto;display:block;" />
     <span class="tooltip">Momen berharga</span>
   </div>
 
