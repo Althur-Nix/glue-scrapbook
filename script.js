@@ -5,7 +5,7 @@ const pages = [
     <img src="terbang.jpg" alt="terbangbjir" />
   </div>
   <div class="photo-frame top-right" style="top: 60px; left: 800px; width: 200px; --rotation: 8deg">
-    <img src="foto9.jpg" alt="prosesscrap" />
+    <img src="hmm.jpg" alt="prosesscrap" />
     <span class="tooltip">Bentuk awal scrapnya</span>
   </div>
   <div class="photo-frame bottom-left" style="top: 250px; left: 150px; width: 220px; --rotation: 4deg">
