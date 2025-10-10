@@ -19,6 +19,15 @@ const pages = [
   </div>
   <div class="icon-coffee" style="top: 120px; left: 350px"></div>
   `,
+  `
+  <div class="photo-frame center" style="top: 40px; left: 480px; width: 240px; --rotation: -3deg">
+    <img src="caturs.jpg" alt="momen-berharga" style="width:100%;height:auto;display:block;" />
+    <span class="tooltip">Momen berharga</span>
+  </div>
+
+ 
+  <div class="icon-star" style="top: 120px; left: 620px"></div>
+  `,
 ];
 
 const mainDisplay = document.getElementById("mainDisplay");
