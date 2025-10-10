@@ -502,61 +502,67 @@ audio::-webkit-media-controls-time-remaining-display {
     order: 2;
   }
 
-  /* mobile-friendly nav wrapper */
+  /* mobile: force visible, centered, touch-friendly nav */
   .scrapbook-nav.vertical-nav {
     display: flex !important;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    gap: 15px;
     width: 100%;
-    margin: 30px auto;
-    padding: 0;
-    background: transparent;
-    box-shadow: none;
+    margin: 40px auto !important;
+    gap: 15px !important;
     position: static !important;
     top: auto !important;
     left: auto !important;
     right: auto !important;
     bottom: auto !important;
-    z-index: 50;
-    flex-wrap: wrap;
+    background-color: transparent !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    border: none !important;
+    z-index: 10 !important;
+    flex-wrap: wrap !important;
   }
 
-  /* clean, circular, touch-friendly buttons */
-  .scrapbook-nav.vertical-nav .nav-btn {
-    width: 45px;
-    height: 45px;
-    min-width: 45px;
-    min-height: 45px;
-    background-color: #b8860b; /* Antique Gold */
-    color: #4d2c1e; /* Dark Mahogany */
-    border: 1px solid #704214; /* Sepia border */
-    border-radius: 50%;
-    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
-    font-family: "Lora", serif;
-    font-size: 1.05rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    transition: transform 0.12s ease, background-color 0.12s ease;
+  /* mobile: larger circular buttons, reset desktop positioning */
+  .scrapbook-nav.vertical-nav .nav-btn,
+  .nav-btn {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    width: 50px !important;
+    height: 50px !important;
+    min-width: 50px !important;
+    min-height: 50px !important;
+    border-radius: 50% !important;
+    background-color: #b8860b !important;
+    color: #4d2c1e !important;
+    border: 2px solid #704214 !important;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3) !important;
+    font-family: "Lora", serif !important;
+    font-size: 1.3em !important;
+    cursor: pointer !important;
+    transition: all 0.3s ease !important;
     position: static !important;
     transform: none !important;
     top: auto !important;
     left: auto !important;
     right: auto !important;
     bottom: auto !important;
-    flex-shrink: 0;
+    flex-shrink: 0 !important;
+    margin: 0 10px !important;
+    box-sizing: border-box !important;
+    padding: 0 !important;
   }
 
-  /* active / hover state */
-  .scrapbook-nav.vertical-nav .nav-btn:hover,
-  .scrapbook-nav.vertical-nav .nav-btn.active {
-    background-color: #4d2c1e; /* Dark Mahogany */
-    color: #fffbe6;
-    border-color: #b8860b;
-    transform: scale(1.06);
+  /* active / current page styling */
+  .scrapbook-nav.vertical-nav .nav-btn.active,
+  .nav-btn.active-page {
+    background-color: #4d2c1e !important;
+    color: #f7eedd !important;
+    border-color: #b8860b !important;
+    box-shadow: inset 1px 1px 3px rgba(0, 0, 0, 0.4) !important;
+    transform: scale(1.04) !important;
   }
 }
 
