@@ -488,21 +488,66 @@ audio::-webkit-media-controls-time-remaining-display {
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
-  /* ensure main content stacks first, then nav, then footer */
+  /* General Layout */
+  body {
+    padding: 10px;
+  }
+  .scrapbook-container {
+    width: 95%;
+    max-width: none;
+    margin: 0 auto;
+    padding: 15px;
+    box-shadow: none;
+  }
   .scrapbook-content-area {
-    flex-direction: column !important;
-  }
-  .main-display-area {
-    order: 0;
-  }
-  .scrapbook-nav.vertical-nav {
-    order: 1;
-  }
-  .scrapbook-footer {
-    order: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    width: 100%;
+    min-height: auto;
   }
 
-  /* mobile: force visible, centered, touch-friendly nav */
+  /* Header */
+  .scrapbook-header h1 {
+    font-size: 2em;
+  }
+  .scrapbook-header .custom-play-btn,
+  .scrapbook-header button {
+    display: block;
+    margin: 0 auto;
+    margin-top: 10px;
+    padding: 10px 18px;
+  }
+
+  /* Photos & Text Notes */
+  .photo-frame,
+  .text-note {
+    position: static !important;
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+    transform: none !important;
+    width: 90%;
+    max-width: 400px;
+    margin: 0 auto;
+    margin-bottom: 25px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+  }
+  .text-note {
+    font-size: 1em;
+    padding: 15px;
+  }
+
+  /* Decorative Elements */
+  .icon-quill,
+  .icon-books,
+  .icon-coffee {
+    display: none !important;
+  }
+
+  /* Navigation/Pagination */
   .scrapbook-nav.vertical-nav {
     display: flex !important;
     flex-direction: row;
@@ -521,19 +566,14 @@ audio::-webkit-media-controls-time-remaining-display {
     padding: 0 !important;
     border: none !important;
     z-index: 10 !important;
-    flex-wrap: wrap !important;
+    flex-wrap: wrap;
   }
-
-  /* mobile: larger circular buttons, reset desktop positioning */
-  .scrapbook-nav.vertical-nav .nav-btn,
   .nav-btn {
     display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
+    justify-content: center;
+    align-items: center;
     width: 50px !important;
     height: 50px !important;
-    min-width: 50px !important;
-    min-height: 50px !important;
     border-radius: 50% !important;
     background-color: #b8860b !important;
     color: #4d2c1e !important;
@@ -541,32 +581,29 @@ audio::-webkit-media-controls-time-remaining-display {
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3) !important;
     font-family: "Lora", serif !important;
     font-size: 1.3em !important;
-    cursor: pointer !important;
-    transition: all 0.3s ease !important;
     position: static !important;
     transform: none !important;
     top: auto !important;
     left: auto !important;
     right: auto !important;
     bottom: auto !important;
-    flex-shrink: 0 !important;
-    margin: 0 10px !important;
-    box-sizing: border-box !important;
-    padding: 0 !important;
+    cursor: pointer;
+    transition: all 0.3s ease !important;
   }
-
-  /* active / current page styling */
-  .scrapbook-nav.vertical-nav .nav-btn.active,
   .nav-btn.active-page {
     background-color: #4d2c1e !important;
     color: #f7eedd !important;
     border-color: #b8860b !important;
     box-shadow: inset 1px 1px 3px rgba(0, 0, 0, 0.4) !important;
-    transform: scale(1.04) !important;
+  }
+
+  /* Footer */
+  .scrapbook-footer {
+    font-size: 0.8em;
+    padding-top: 15px;
+    margin-top: 25px;
   }
 }
-
-/* ...existing code... */
 
 @media (max-width: 600px) {
   .scrapbook-container {
