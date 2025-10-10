@@ -488,60 +488,10 @@ audio::-webkit-media-controls-time-remaining-display {
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
-  /* Make sure the nav is visible and placed below main content on mobile */
-  .scrapbook-nav.vertical-nav {
-    display: flex !important;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 12px;
-    width: 100%;
-    margin: 22px auto;
-    padding: 6px 0;
-    position: static !important;
-    top: auto !important;
-    left: auto !important;
-    right: auto !important;
-    bottom: auto !important;
-    background: transparent;
-    box-shadow: none;
-    z-index: 40;
-    order: 1; /* ensure it appears after .main-display-area in flex order */
+  /* ensure main content stacks first, then nav, then footer */
+  .scrapbook-content-area {
+    flex-direction: column !important;
   }
-
-  /* Button sizing / style for easy tapping */
-  .scrapbook-nav.vertical-nav .nav-btn {
-    width: 44px;
-    height: 44px;
-    font-size: 1.05rem;
-    border-radius: 50%;
-    border: 2px solid #704214;
-    background: #b8860b;
-    color: #4d2c1e;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
-    transform: none !important;
-    position: static !important;
-    flex-shrink: 0;
-  }
-
-  .scrapbook-nav.vertical-nav .nav-btn:hover,
-  .scrapbook-nav.vertical-nav .nav-btn.active {
-    background: #004d40;
-    color: #fffbe6;
-    transform: scale(1.06);
-    border-color: #b8860b;
-  }
-
-  /* If timeline/sidebar was hidden, keep it hidden but nav is visible */
-  .timeline-section {
-    display: none !important;
-  }
-
-  /* Ensure ordering so nav sits between main content and footer */
   .main-display-area {
     order: 0;
   }
@@ -550,7 +500,63 @@ audio::-webkit-media-controls-time-remaining-display {
   }
   .scrapbook-footer {
     order: 2;
-    margin-top: 18px;
+  }
+
+  /* mobile-friendly nav wrapper */
+  .scrapbook-nav.vertical-nav {
+    display: flex !important;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+    margin: 30px auto;
+    padding: 0;
+    background: transparent;
+    box-shadow: none;
+    position: static !important;
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+    z-index: 50;
+    flex-wrap: wrap;
+  }
+
+  /* clean, circular, touch-friendly buttons */
+  .scrapbook-nav.vertical-nav .nav-btn {
+    width: 45px;
+    height: 45px;
+    min-width: 45px;
+    min-height: 45px;
+    background-color: #b8860b; /* Antique Gold */
+    color: #4d2c1e; /* Dark Mahogany */
+    border: 1px solid #704214; /* Sepia border */
+    border-radius: 50%;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+    font-family: "Lora", serif;
+    font-size: 1.05rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.12s ease, background-color 0.12s ease;
+    position: static !important;
+    transform: none !important;
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+    flex-shrink: 0;
+  }
+
+  /* active / hover state */
+  .scrapbook-nav.vertical-nav .nav-btn:hover,
+  .scrapbook-nav.vertical-nav .nav-btn.active {
+    background-color: #4d2c1e; /* Dark Mahogany */
+    color: #fffbe6;
+    border-color: #b8860b;
+    transform: scale(1.06);
   }
 }
 
