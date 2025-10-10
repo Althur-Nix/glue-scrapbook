@@ -488,57 +488,69 @@ audio::-webkit-media-controls-time-remaining-display {
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
-  /* pastikan konten tetap stack, dan nav terlihat di bawah konten */
-  .scrapbook-content-area {
-    flex-direction: column !important;
-  }
-
-  /* tampilkan kembali tombol nav tapi dalam bar horizontal yang terpusat */
-  .vertical-nav {
+  /* Make sure the nav is visible and placed below main content on mobile */
+  .scrapbook-nav.vertical-nav {
     display: flex !important;
-    position: static !important;
-    flex-direction: row !important;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     gap: 12px;
-    margin: 18px auto 8px auto; /* ruang antar konten dan footer */
-    padding: 8px 0;
     width: 100%;
-    order: 1; /* pastikan muncul setelah .main-display-area */
-    z-index: 30;
-    box-sizing: border-box;
+    margin: 22px auto;
+    padding: 6px 0;
+    position: static !important;
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+    background: transparent;
+    box-shadow: none;
+    z-index: 40;
+    order: 1; /* ensure it appears after .main-display-area in flex order */
   }
 
-  /* tombol nav lebih kecil, tetap tappable, tema gold */
-  .nav-btn {
-    width: 40px;
-    height: 40px;
-    font-size: 1rem;
+  /* Button sizing / style for easy tapping */
+  .scrapbook-nav.vertical-nav .nav-btn {
+    width: 44px;
+    height: 44px;
+    font-size: 1.05rem;
     border-radius: 50%;
-    border-width: 2px;
-    padding: 0;
+    border: 2px solid #704214;
+    background: #b8860b;
+    color: #4d2c1e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
-    transition: transform 0.12s ease, background 0.12s ease;
-  }
-  .nav-btn:hover,
-  .nav-btn.active {
-    transform: scale(1.06);
+    transform: none !important;
+    position: static !important;
+    flex-shrink: 0;
   }
 
-  /* jika ada container timeline/sidebar tetap disembunyikan */
+  .scrapbook-nav.vertical-nav .nav-btn:hover,
+  .scrapbook-nav.vertical-nav .nav-btn.active {
+    background: #004d40;
+    color: #fffbe6;
+    transform: scale(1.06);
+    border-color: #b8860b;
+  }
+
+  /* If timeline/sidebar was hidden, keep it hidden but nav is visible */
   .timeline-section {
     display: none !important;
   }
 
-  /* beri jarak yang cukup sebelum footer */
-  .scrapbook-footer {
-    margin-top: 22px;
-  }
-
-  /* pastikan nav tidak menimpa konten */
+  /* Ensure ordering so nav sits between main content and footer */
   .main-display-area {
     order: 0;
-    width: 100%;
+  }
+  .scrapbook-nav.vertical-nav {
+    order: 1;
+  }
+  .scrapbook-footer {
+    order: 2;
+    margin-top: 18px;
   }
 }
 
